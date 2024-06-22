@@ -6,9 +6,12 @@ import SideBar from './app/layouts/SideBar'
 function App() {
 
   return (
-    <div>
+    <div className='app-container' style={{
+    }}>
       <ErrorBoundary>
+        <div className='app-header'>
         <SideBar />
+        </div>
       </ErrorBoundary>
       <ErrorBoundary>
         <Routes />

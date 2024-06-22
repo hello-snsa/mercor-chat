@@ -1,0 +1,97 @@
+.sidebar{
+    width: 5.5rem;
+    height: 100%;
+    background-color: #fff;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: 0.5s;
+}
+.sidebar.active{
+    width: 16rem;
+    color: #000;
+}
+.sidebar .logo-details{
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .logo-details i{
+    font-size: 2.5rem;
+    color: grey;
+    transition: 0.5s;
+}
+.sidebar .logo-details .logo_name{
+    font-size: 1rem;
+    color: grey;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.logo-details > a.active > img{
+    width: 3rem;
+    fill: #6E49BD;
+}
+
+
+.logo-details > a.active > .logo_name{
+    color: #000;
+    /* background-color: rgb(181, 57, 18    8); */
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.logo-details img{
+    width: 3rem;
+    color:red;
+    fill: green;
+}
+.logo-details svg path {
+    fill: red !important;
+    color:red;
+  }
+  .logo-svg path {
+    fill: red !important;
+    color:red;
+  }
+
+  .nav-icon{
+    font-size: 2rem;
+    color: red;
+    transition: 0.5s;
+    fill:green
+  }
+
+  @media screen and (max-width: 768px){
+    .sidebar{
+        width: 100%;
+        height: 7.5rem;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-evenly;
+        
+    }
+    .sidebar-top{
+        display: flex;
+        flex-direction: row;
+        gap: 8rem;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .sidebar-bottom{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo-details{
+        padding: 0.5rem;
+    }
+    
+}
