@@ -3,15 +3,21 @@ import {useState} from 'react'
 import './aiSearch.css'
 import { SearchIcon } from '../../../assets/images';
 
-export default function SearchBar() {
-    const [searchText, setSearchText] = useState('');
+export default function SearchBar({setUserQuery}) {
+    const [userInput, setUserInput] = useState('');
 
     const onSearchChange = (e) => {
-        setSearchText(e.target.value);
+        //if key is enter, search
+        if(e.key === 'Enter'){
+            handleSearch();
+        }
+        setUserInput(e.target.value);
     }
 
     const handleSearch = () => {
         console.log('searching...')
+        setUserQuery(userInput);
+        setUserInput('');
     }
   return (
     <div className='aiSearch_SearchBar'>
@@ -28,9 +34,12 @@ export default function SearchBar() {
             <input type='text' placeholder='Search'
             className='aiSearch_searchField_input'
             onChange={onSearchChange}
-            value={searchText}
+            onKeyDown={onSearchChange}
+            value={userInput}
             />
-            <button onClick={handleSearch} className='btn-hidden-outline'>
+            <button onClick={handleSearch} className='btn-hidden-outline'
+            disabled={userInput===""} 
+            >
                 <img src={SearchIcon} alt='white arrow head inside a purple circle' />
             </button>
         </div>

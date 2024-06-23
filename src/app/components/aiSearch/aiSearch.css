@@ -66,12 +66,68 @@
     background-color: #fff;
     border-radius: 24px;
 }
+.chatCanvas_message_sender , .chatCanvas_message_bot{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.chatCanvas_message_sender{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+.chatCanvas_message_sender_text , .chatCanvas_message_bot_text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+    background-color: #6E49BD;
+    color:#fff;
+    width: 40%;
+    height: fit-content;
+    min-height: 50px;
+    padding: 1rem;
+    border-radius: 24px;
+    position: relative;
+    top:0;
+    right: 0;
+
+}
+.chatCanvas_message_sender_text p,.chatCanvas_message_bot_text p{
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    
+}
+.chatCanvas_message_sender img,.chatCanvas_message_bot img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+
+}
+.chatCanvas_message_bot_text{
+    /* display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem; */
+    background-color: #CED2D8;
+    color:#333;
+    /* width: 40%; */
+    /* min-height: fit-content;
+    min-height: 50px;
+    padding: 1rem;
+    margin-right: 2rem;
+    border-radius: 24px; */
+}
 
 /* Chat Canvas */
 .chatCanvas{
     min-height: 80vh;
     width: 100%;
     /* padding: 0 6rem; */
+    position: relative;
+    margin-bottom: 10rem;
 }
 .chatCanvas_hero{
     display: flex;
@@ -80,6 +136,70 @@
     width: 100%;
     height: 100vh;
 
+}
+.chatCanvas_chatContainer{
+    padding: 2rem 8rem;
+    /* padding-right: 2rem; */
+    /* background-color: red; */
+}
+
+/* CandidateCard */
+.chatCanvas_message_candidate{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 1rem;
+    background-color: #fff;
+    width: 80%;
+    height:30rem;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 2.4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+.candidateCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+.chatCanvas_message_candidate_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100rem;
+    /* margin-bottom: 1rem; */
+    /* gap:2rem;
+    color: #000;
+    font-weight: 500;
+    font-weight:bold;
+    font-size: 1.6rem;
+    background-color: red; */
+}
+.chatCanvas_message_candidate_topLeft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap:2rem;
+    color: #000;
+    font-weight: 500;
+    font-weight:bold;
+    font-size: 1.6rem;
+    
+}
+.chatCanvas_message_candidate_image img{
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    background-color: #fff;
+    object-fit:cover;
 }
 
 /* Media query */
@@ -103,6 +223,10 @@
     }
     .chatCanvas {
         padding: 0 2rem;
+        margin-bottom: 1rem;
+        position: relative;
+        top: 0;
+        left: 0;
     }
     .aiSearch_SearchBar {
         /* padding: 0 1rem; */

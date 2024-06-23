@@ -1,7 +1,7 @@
 import { t } from "i18next";
 import { useEffect, useState } from "react";
 import AiSearch from "./AiSearch";
-import { TOKEN } from "../../utils/Constants";
+import { REFRESH_TOKEN, TOKEN } from "../../utils/Constants";
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -23,6 +23,7 @@ export default function Login() {
         if ( email==="ali@test.com" && password==="123456") {
             localStorage.setItem("email", email);
             localStorage.setItem("MercorUserToken", TOKEN);
+            localStorage.setItem("MercorRefreshToken", REFRESH_TOKEN);
             window.location.href = "/ai-search";
         }else{
             console.log("Invalid email or password")
