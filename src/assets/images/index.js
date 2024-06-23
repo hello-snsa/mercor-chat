@@ -4,8 +4,10 @@ import Search from './icons/search.svg';
 import SearchActive from './icons/searchActive.svg';
 import Bookmark from './icons/bookmark.svg';
 import BookmarkActive from './icons/bookmarkActive.svg';
+import SearchIcon from './icons/searchIcon.svg';
 import Logout from './icons/logout.svg';
 import LoginHero from './loginHero.png';
+import ChatHero from './chatHero.png';
 
 export {
     HomeIcon,
@@ -15,6 +17,8 @@ export {
     Bookmark,
     BookmarkActive,
     LoginHero,
-    Logout
+    Logout,
+    SearchIcon,
+    ChatHero
 
 }

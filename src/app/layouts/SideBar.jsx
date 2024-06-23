@@ -20,7 +20,7 @@ export default function SideBar() {
   }, [location])
 
   return (
-    <div className="flex flex-column flex-justify-space-between height-100 width-100 sidebar">
+    <div className="flex flex-column flex-justify-space-between height-100 width-100 sidebar" >
       <div className="sidebar-top flex flex-column mt-2r">
         <div className="logo-details">
           <NavLink to="/">

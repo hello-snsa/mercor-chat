@@ -15,8 +15,7 @@ function App() {
   }, [location])
 
   return (
-    <div className='app-container' style={{
-    }}>
+    <div className='app-container'>
       <ErrorBoundary>
         {currentLocation!="/login"?<div className='app-header'>
         <SideBar />
