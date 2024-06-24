@@ -66,6 +66,7 @@
     background-color: #fff;
     border-radius: 24px;
 }
+
 .chatCanvas_message_sender , .chatCanvas_message_bot{
     display: flex;
     justify-content: flex-start;
@@ -152,12 +153,12 @@
     margin-top: 1rem;
     background-color: #fff;
     width: 80%;
-    height:30rem;
+    min-height:30rem;
     margin: 2rem;
     padding: 2rem;
     border-radius: 2.4rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    margin :2rem;
 }
 .candidateCard{
     display: flex;
@@ -201,7 +202,16 @@
     background-color: #fff;
     object-fit:cover;
 }
-
+.hireIcon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #6E49BD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 /* Media query */
 @media screen and (max-width: 768px) {
     .aiSearch_SearchBar {

@@ -19,15 +19,20 @@ export default function SearchBar({setUserQuery}) {
         setUserQuery(userInput);
         setUserInput('');
     }
+
+    const handleTagClick = (tag) => {
+        setUserQuery(tag);
+        // TODO: Add tag to search query
+    }
   return (
     <div className='aiSearch_SearchBar'>
 {/* Tags */}
         <div className='aiSearch_tags'>
-            <div className='aiSearch_tag'>All</div>
-            <div className='aiSearch_tag'>People</div>
-            <div className='aiSearch_tag'>Documents</div>
-            <div className='aiSearch_tag'>Images</div>
-            <div className='aiSearch_tag'>Videos</div>
+            <div className='aiSearch_tag'><button className='btn-hidden-outline' onClick={()=>handleTagClick("3 years Experience")}> 3 years Experience</button></div>
+            <div className='aiSearch_tag'><button className='btn-hidden-outline' onClick={()=>handleTagClick("Full time only")}> Full time only</button></div>
+            <div className='aiSearch_tag'><button className='btn-hidden-outline' onClick={()=>handleTagClick("Part time only")}> Part time only</button></div>
+            <div className='aiSearch_tag'><button className='btn-hidden-outline' onClick={()=>handleTagClick("Budget is 5000")}> Budget is 5000 </button></div>
+            <div className='aiSearch_tag'><button className='btn-hidden-outline' onClick={()=>handleTagClick("Education : B.tech")}> Education : B.tech</button></div>
         </div>
         {/* Search bar */}
         <div className='aiSearch_searchField'>

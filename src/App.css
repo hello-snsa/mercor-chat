@@ -18,6 +18,17 @@
   color: inherit;
   cursor: pointer;
 }
+.btn-extended{
+  width: 100rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-top: 10rem;
+  border-radius: 0.5rem;
+}
+.btn-shadow{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 /* Flex */
 .flex {
   display: flex;
@@ -227,6 +238,16 @@
 }
 .pl-0r {
   padding-left: 0;
+}
+/* Appearance */
+.bold{
+  font-weight: bold;
+}
+.fs-14{
+  font-size: 1.4rem;
+}
+.fs-16{
+  font-size: 2.4rem;
 }
 @media screen and (max-width: 768px){
 
