@@ -4,6 +4,14 @@
   height: 100vh;
 
 }
+.btn-primary {
+  background-color: #6E49BD;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+}
 .btn-hidden-outline {
   border: none;
   background: none;
@@ -69,7 +77,9 @@
 .flex-align-content-stretch {
   align-content: stretch;
 }
-
+.gap-1 {
+  gap: 1rem;
+}
 /* Width */
 .width-100 {
   width: 100%;
@@ -224,6 +234,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 999;
 }
 }
 

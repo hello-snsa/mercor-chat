@@ -6,7 +6,7 @@ import axios from 'axios';
 import CandidateCard from './CandidateCard';
 
 export default function ChatCanvas({ userQuery }) {
-  const chatEndRef = useRef(null);
+  const bottomRef = useRef(null);
 
   const [messages, setMessages] = useState([]);
   const [chatData, setChatData] = useState([]);
@@ -552,7 +552,7 @@ export default function ChatCanvas({ userQuery }) {
   console.log("messages==>", messages);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    userQuery !== "" && bottomRef?.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages])
 
   useEffect(() => {
@@ -601,7 +601,7 @@ export default function ChatCanvas({ userQuery }) {
             )
           })
         }
-        <div ref={chatEndRef} />
+        <div ref={bottomRef} />
 
       </div>
     </div>

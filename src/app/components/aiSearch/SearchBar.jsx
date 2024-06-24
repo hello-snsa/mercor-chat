@@ -8,10 +8,10 @@ export default function SearchBar({setUserQuery}) {
 
     const onSearchChange = (e) => {
         //if key is enter, search
+        setUserInput(e.target.value);
         if(e.key === 'Enter'){
             handleSearch();
         }
-        setUserInput(e.target.value);
     }
 
     const handleSearch = () => {
