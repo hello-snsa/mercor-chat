@@ -1,0 +1,691 @@
+{
+    "bot_message": "I was able to find candidates who meet your requirements. Would you like to refine the search with additional criteria, such as work availability, skills, budget, or start time?",
+    "candidates": [
+        {
+            "_additional": {
+                "rerank": [
+                    {
+                        "score": 0.86072075
+                    }
+                ],
+                "score": "0.44394562"
+            },
+            "awards": [
+                {
+                    "description": "Gave a talk on 'Intro to Open Source' in a tech event consisting of around 130 people."
+                },
+                {
+                    "description": "Successfully Completed GSSOC"
+                },
+                {
+                    "description": "Selected and Attended for CVIT Summer School by IIIT H"
+                }
+            ],
+            "combined": 0.597578248,
+            "country": "India",
+            "education": [
+                {
+                    "deg": 2,
+                    "degree": "BTech",
+                    "educationId": "675d58bf-e978-11ee-ad6f-42010a40003b",
+                    "endDate": "2024",
+                    "grade": "9.36",
+                    "isUniversityInWest": 0,
+                    "linkedInUrl": "https://in.linkedin.com/school/amrita-vishwa-vidyapeetham-official/",
+                    "major": "Computer Science",
+                    "rateGPA": 5,
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "school": "Amrita University",
+                    "schoolLogo": "https://linkedin-company-logos.s3.amazonaws.com/school-Amrita%20University.jpeg",
+                    "startDate": "2020",
+                    "uni": 3
+                },
+                {
+                    "deg": 1,
+                    "degree": "MPC",
+                    "educationId": "675db1f7-e978-11ee-ad6f-42010a40003b",
+                    "endDate": "2020",
+                    "grade": "10.0",
+                    "isUniversityInWest": 0,
+                    "linkedInUrl": "",
+                    "major": "",
+                    "rateGPA": 5,
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "school": "Tirumala Junior College",
+                    "schoolLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-school-tirumala-junior-college.jpeg",
+                    "startDate": "2018",
+                    "uni": 1
+                }
+            ],
+            "finalImageUrl": "https://storage.googleapis.com/pic-gen/d9c29e61-966f-11ee-a4ba-42010a400021_ai_pic.jpg",
+            "fullTime": 1,
+            "fullTimeAvailability": 0,
+            "fullTimePrice": 4296,
+            "generativeProfilePicOptedIn": 1,
+            "githubData": null,
+            "githubStats": {
+                "followerCount": 67,
+                "githubStatsId": "1a6d3ca0-3b16-4ab7-b87a-35d605d8bd60",
+                "mostComplexRepo": null,
+                "oneYearContributions": {
+                    "endedAt": "2023-10-25T18:29:59Z",
+                    "hasAnyContributions": true,
+                    "popularIssueContribution": null,
+                    "popularPullRequestContribution": {
+                        "isRestricted": false,
+                        "pullRequest": {
+                            "changedFiles": 10,
+                            "createdAt": "2023-08-05T12:46:14Z",
+                            "reviewDecision": "APPROVED",
+                            "title": "feat: add password requirements",
+                            "url": "https://github.com/lightdash/lightdash/pull/6632"
+                        }
+                    },
+                    "restrictedContributionsCount": 519,
+                    "startedAt": "2022-10-22T18:30:00Z",
+                    "totalCommitContributions": 71,
+                    "totalIssueContributions": 1,
+                    "totalPullRequestContributions": 3,
+                    "totalPullRequestReviewContributions": 0,
+                    "totalRepositoriesWithContributedCommits": 13,
+                    "totalRepositoriesWithContributedIssues": 1,
+                    "totalRepositoriesWithContributedPullRequestReviews": 0,
+                    "totalRepositoriesWithContributedPullRequests": 2,
+                    "totalRepositoryContributions": 14
+                },
+                "overallLanguageStats": {
+                    "C": {
+                        "percentage": 0.06,
+                        "size": 12049
+                    },
+                    "C++": {
+                        "percentage": 0.03,
+                        "size": 6981
+                    },
+                    "CSS": {
+                        "percentage": 4.39,
+                        "size": 949275
+                    },
+                    "Dart": {
+                        "percentage": 0.37,
+                        "size": 78986
+                    },
+                    "Dockerfile": {
+                        "percentage": 0.0,
+                        "size": 353
+                    },
+                    "Emacs Lisp": {
+                        "percentage": 0.0,
+                        "size": 157
+                    },
+                    "Go": {
+                        "percentage": 0.0,
+                        "size": 1025
+                    },
+                    "HCL": {
+                        "percentage": 0.08,
+                        "size": 17877
+                    },
+                    "HTML": {
+                        "percentage": 4.47,
+                        "size": 967232
+                    },
+                    "Java": {
+                        "percentage": 0.58,
+                        "size": 126115
+                    },
+                    "JavaScript": {
+                        "percentage": 19.57,
+                        "size": 4230803
+                    },
+                    "Kotlin": {
+                        "percentage": 0.0,
+                        "size": 374
+                    },
+                    "Makefile": {
+                        "percentage": 0.01,
+                        "size": 1509
+                    },
+                    "Objective-C": {
+                        "percentage": 0.02,
+                        "size": 3920
+                    },
+                    "Objective-C++": {
+                        "percentage": 0.04,
+                        "size": 7717
+                    },
+                    "Perl": {
+                        "percentage": 0.05,
+                        "size": 10188
+                    },
+                    "PowerShell": {
+                        "percentage": 0.04,
+                        "size": 8834
+                    },
+                    "Puppet": {
+                        "percentage": 0.61,
+                        "size": 130876
+                    },
+                    "Python": {
+                        "percentage": 58.9,
+                        "size": 12736184
+                    },
+                    "Ruby": {
+                        "percentage": 0.04,
+                        "size": 8294
+                    },
+                    "Shell": {
+                        "percentage": 0.72,
+                        "size": 156586
+                    },
+                    "Starlark": {
+                        "percentage": 0.01,
+                        "size": 1926
+                    },
+                    "Swift": {
+                        "percentage": 0.01,
+                        "size": 1325
+                    },
+                    "TypeScript": {
+                        "percentage": 10.01,
+                        "size": 2164674
+                    }
+                },
+                "starCount": 18849
+            },
+            "isActive": 0,
+            "name": "S. N. ",
+            "newScore": 7,
+            "partTime": 1,
+            "partTimeAvailability": 0,
+            "partTimePrice": 2150,
+            "profilePic": "https://storage.googleapis.com/pic-gen/d9c29e61-966f-11ee-a4ba-42010a400021_itv_pic.jpg",
+            "projects": [
+                {
+                    "description": "A webapp to maintain overall org, which consists of many features like kanban board for managing tasks, expense tracking, workload management with statistics for each member. Built using NextJS, Nodejs, ExpressJS, RestAPI.",
+                    "endDate": "",
+                    "link": "",
+                    "projectId": "676b64b9-e978-11ee-ad6f-42010a40003b",
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "startDate": "",
+                    "title": "Project Management Tool"
+                },
+                {
+                    "description": "A web app for managing all the activities of a library like managing members and book transactions, built on MERN Stack",
+                    "endDate": "",
+                    "link": "",
+                    "projectId": "676bb549-e978-11ee-ad6f-42010a40003b",
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "startDate": "",
+                    "title": "Library Management System"
+                },
+                {
+                    "description": "An app for universities and schools built using React Native, Nodejs, ExpressJS, RestAPI. It consists of many features like managing assignments, time table, chat, & statistics for members.",
+                    "endDate": "",
+                    "link": "",
+                    "projectId": "676bf826-e978-11ee-ad6f-42010a40003b",
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "startDate": "",
+                    "title": "CampusMind"
+                },
+                {
+                    "description": "A realtime chat application using sockets built using MERN Stack",
+                    "endDate": "",
+                    "link": "",
+                    "projectId": "676c39dd-e978-11ee-ad6f-42010a40003b",
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "startDate": "",
+                    "title": "AmigoChat"
+                },
+                {
+                    "description": "A bot made using NodeJS and Twilio has features like vaccinations info, GitHub repo's info, required locations near you\u2026",
+                    "endDate": "",
+                    "link": "",
+                    "projectId": "676c749b-e978-11ee-ad6f-42010a40003b",
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "startDate": "",
+                    "title": "HelpOn(WhatsAppBot)"
+                }
+            ],
+            "rerank_score": 0.83508044,
+            "rerank_summary": "\nEducation:\nReceived BTech in Computer Science, from Amrita University during (2020-2024); Received MPC in , from Tirumala Junior College during (2018-2020)\n\nWork Experience:\nWorked as Software Engineer Intern at SAP Labs, during (2023-2023); Worked as Full Stack Developer Intern at Dexterio, during (2022-2022); Worked as React Developer Intern at Aroundly, during (2021-2022); Worked as Lead Web Developer at Amrita ACM Student Chapter, during (2021-2022)\nAwards Received: Gave a talk on 'Intro to Open Source' in a tech event consisting of around 130 people.; Successfully Completed GSSOC; Selected and Attended for CVIT Summer School by IIIT H\nSkills proficient in: JavaScript, React, Node.js, Next.js, Express.js\n\nCountry: India",
+            "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+            "skills": [
+                "JavaScript",
+                "React",
+                "Node.js",
+                "Next.js",
+                "Express.js"
+            ],
+            "summary": "Automated microservices monitoring, boosting efficiency at SAP Labs as an intern.",
+            "userId": "d9c29e61-966f-11ee-a4ba-42010a400021",
+            "videoRecording": "https://storage.cloud.google.com/ai_interviewer_recordings/1702317006882.mp4",
+            "workExperience": [
+                {
+                    "company": "SAP Labs",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-sap-labs.jpeg",
+                    "companyWebsite": null,
+                    "description": "Worked on automation using Java for the microservices monitoring and improving the customer experience with the new features of the existing product. Achieved a remarkable increase in the pass percentage from 25% to 90% through automation and successfully converted manual tasks to automated processes.",
+                    "endDate": "2023",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://in.linkedin.com/company/saplabsindia",
+                    "locationCity": "Bangalore",
+                    "locationCountry": "India",
+                    "rateGrammar": 3,
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "role": "Software Engineer Intern",
+                    "startDate": "2023",
+                    "workExperienceId": "66b8ffab-e978-11ee-ad6f-42010a40003b",
+                    "work_exp": 4,
+                    "yearsWorked": 0
+                },
+                {
+                    "company": "Dexterio",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-dexterio.jpeg",
+                    "companyWebsite": null,
+                    "description": "Developed a complete end-to-end B2B order management webapp and innovated efficient image loading, video conversion, and image optimization techniques resulting in 30-40% faster loading, 40-50% smaller video sizes, and 80-90% reduced image[17MB to 313KB] sizes with the same quality. Developed npm module, for shifting the app to microservices architecture, alongside admin app and WhatsApp bot seamless marketing automation and user/order management.",
+                    "endDate": "2022",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://www.linkedin.com/company/dexterio",
+                    "locationCity": "Jaipur",
+                    "locationCountry": "India",
+                    "rateGrammar": 3,
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "role": "Full Stack Developer Intern",
+                    "startDate": "2022",
+                    "workExperienceId": "66b94c66-e978-11ee-ad6f-42010a40003b",
+                    "work_exp": 2,
+                    "yearsWorked": 0
+                },
+                {
+                    "company": "Aroundly",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-aroundly.jpeg",
+                    "companyWebsite": null,
+                    "description": "Crafted impactful React Native app screens, enhanced the admin app and also developed and maintained the company's website and web view components using ReactJS. Contributed to the app's growth from 0 to 100 installs.",
+                    "endDate": "2022",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://in.linkedin.com/company/aroundly",
+                    "locationCity": "Bangalore",
+                    "locationCountry": "India",
+                    "rateGrammar": 3,
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "role": "React Developer Intern",
+                    "startDate": "2021",
+                    "workExperienceId": "66b998d9-e978-11ee-ad6f-42010a40003b",
+                    "work_exp": 2,
+                    "yearsWorked": 1
+                },
+                {
+                    "company": "Amrita ACM Student Chapter",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-amrita-acm-student-chapter.jpeg",
+                    "companyWebsite": null,
+                    "description": "Developed and maintained the website of the ACM Student chapter which is helping out more than 3000 people in the college people to see what's happening in ACM.",
+                    "endDate": "2022",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://www.linkedin.com/company/amrita-blockcamp",
+                    "locationCity": "Kerala",
+                    "locationCountry": "India",
+                    "rateGrammar": 3,
+                    "resumeId": "8c72ea08-dade-4dbf-ae56-1440b1312042",
+                    "role": "Lead Web Developer",
+                    "startDate": "2021",
+                    "workExperienceId": "66b9d9ce-e978-11ee-ad6f-42010a40003b",
+                    "work_exp": 2,
+                    "yearsWorked": 1
+                }
+            ],
+            "yearsOfWorkExperience": 1
+        },
+        {
+            "_additional": {
+                "rerank": [
+                    {
+                        "score": 0.89405173
+                    }
+                ],
+                "score": "0.55152446"
+            },
+            "awards": [],
+            "combined": 0.580609784,
+            "country": "India",
+            "education": [
+                {
+                    "deg": 2,
+                    "degree": "BTech",
+                    "educationId": "1d237daf-e95e-11ee-ad6f-42010a40003b",
+                    "endDate": "2020",
+                    "grade": "",
+                    "isUniversityInWest": 0,
+                    "linkedInUrl": "",
+                    "major": "Electronics and Communication Engineering",
+                    "rateGPA": 0,
+                    "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                    "school": "Sreechithra Thirunal College of Engineering",
+                    "schoolLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-school-sreechithra-thirunal-college-of-engineering.jpeg",
+                    "startDate": "2016",
+                    "uni": 2
+                }
+            ],
+            "finalImageUrl": "https://storage.googleapis.com/pic-gen/6e8310f6-cfad-11ee-a4ba-42010a400021_ai_pic.jpg",
+            "fullTime": 1,
+            "fullTimeAvailability": 2,
+            "fullTimePrice": 4296,
+            "generativeProfilePicOptedIn": 1,
+            "githubStats": null,
+            "isActive": 0,
+            "name": "S. S. ",
+            "newScore": 6,
+            "partTime": 1,
+            "partTimeAvailability": 2,
+            "partTimePrice": 3580,
+            "profilePic": "https://storage.googleapis.com/pic-gen/6e8310f6-cfad-11ee-a4ba-42010a400021_itv_pic.jpg",
+            "projects": [
+                {
+                    "description": "A no code drag and drop form builder built with NextJs, React, Prisma, Tailwind and dnt kit. Used to create forms, share generated link and view submissions.",
+                    "endDate": "",
+                    "link": "",
+                    "projectId": "1d2ff9c7-e95e-11ee-ad6f-42010a40003b",
+                    "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                    "startDate": "",
+                    "title": "FormBuilder"
+                },
+                {
+                    "description": "An e-commerce website with admin dashboard built using Angular and NodeJs. Created user authentication, built tables, filters, user management and handle cart.",
+                    "endDate": "",
+                    "link": "",
+                    "projectId": "1d30475f-e95e-11ee-ad6f-42010a40003b",
+                    "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                    "startDate": "",
+                    "title": "Multikart"
+                }
+            ],
+            "rerank_score": 0.936285,
+            "rerank_summary": "\nEducation:\nReceived BTech in Electronics and Communication Engineering, from Sreechithra Thirunal College of Engineering during (2016-2020)\n\nWork Experience:\nWorked as UI Developer 2 at Media.net, during (2022-Present); Worked as Software Engineer at QBurst, during (2020-2022)\n\nSkills proficient in: React, TypeScript, JavaScript, Node.js, Angular\n\nCountry: India",
+            "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+            "skills": [
+                "React",
+                "TypeScript",
+                "JavaScript",
+                "Node.js",
+                "Angular"
+            ],
+            "summary": "Led No-Code Application development, significantly reducing dev time at Media.net.",
+            "userId": "6e8310f6-cfad-11ee-a4ba-42010a400021",
+            "videoRecording": "https://storage.cloud.google.com/ai_interviewer_recordings/daily_79ab7d55-cfad-11ee-a4ba-42010a400021.mp4",
+            "workExperience": [
+                {
+                    "company": "Media.net",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-media-net.jpeg",
+                    "companyWebsite": null,
+                    "description": "Led the development of a No-Code Application using ReactJs, TypeScript, Zustand, enabling developers to swiftly create templates, significantly reducing development time from 5 days to 1 hour. Wireframed and Developed reusable and editable table component with complex filters, incorporated tools and integrated APIs to manage ad campaign cost of 10,000+ customers. Created a location filter plugins with OpenStreetMap integration for 5+ WordPress sites using PHP and JavaScript, utilizing ES6 methods. Collaborate with Product Managers, Web Designers and Software Engineers to deliver compelling 10+ user-facing blog websites. Conducted peer code reviews. Built a tool to efficiently manage and clone ad templates across over 30 GitLab repos. Utilized ReactJS, GitLab APIs and Google OAuth, reducing developer workload from 18 hours to 2 hours.",
+                    "endDate": "Present",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://www.linkedin.com/company/media.net",
+                    "locationCity": "Mumbai",
+                    "locationCountry": "India",
+                    "rateGrammar": 3,
+                    "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                    "role": "UI Developer 2",
+                    "startDate": "2022",
+                    "workExperienceId": "1ceb2ef7-e95e-11ee-ad6f-42010a40003b",
+                    "work_exp": 4,
+                    "yearsWorked": 2
+                },
+                {
+                    "company": "QBurst",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-qburst.jpeg",
+                    "companyWebsite": null,
+                    "description": "Debugged and resolved canvas rendering issue, resulting in loading speed by 70%. Implemented comprehensive unit and integration testing strategies using Jest in NodeJs. Integrated Two-Factor Authentication, following protocols to enhancing app security through both email and Twilio SMS integration for 1000+ businesses. Integrated Google Maps with dynamic elements, crafted reusable and scalable components for seamless user location retrieval, and implemented captivating custom map pin logic. Upgraded Angular 9 to 12, fixing package issues, which resulted in % improved page load. Built user tours and on-boarding using Shephard and wrote necessary APIs in NodeJS, to improve user experience.",
+                    "endDate": "2022",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://www.linkedin.com/company/qburst",
+                    "locationCity": "Kerala",
+                    "locationCountry": "India",
+                    "rateGrammar": 2,
+                    "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                    "role": "Software Engineer",
+                    "startDate": "2020",
+                    "workExperienceId": "1ceb8f35-e95e-11ee-ad6f-42010a40003b",
+                    "work_exp": 2,
+                    "yearsWorked": 2
+                }
+            ],
+            "yearsOfWorkExperience": 4
+        },
+        {
+            "_additional": {
+                "rerank": [
+                    {
+                        "score": 0.8577681
+                    }
+                ],
+                "score": "0.58128405"
+            },
+            "awards": [
+                {
+                    "description": "Hack The League"
+                }
+            ],
+            "combined": 0.47251362,
+            "country": "India",
+            "education": [
+                {
+                    "deg": 2,
+                    "degree": "BTech",
+                    "educationId": "b2aa27fd-e976-11ee-ad6f-42010a40003b",
+                    "endDate": "2024",
+                    "grade": "8.89",
+                    "isUniversityInWest": 0,
+                    "linkedInUrl": "",
+                    "major": "Computer and Communications Engineering",
+                    "rateGPA": 4,
+                    "resumeId": "8508621c-b366-4b9f-b3f0-7665dce8e3b0",
+                    "school": "Manipal University Jaipur",
+                    "schoolLogo": "https://linkedin-company-logos.s3.amazonaws.com/school-Manipal%20University%20Jaipur.jpeg",
+                    "startDate": "2020",
+                    "uni": 3
+                }
+            ],
+            "finalImageUrl": "https://storage.googleapis.com/pic-gen/499bd8dc-6ea0-11ee-8bff-42010a400007_ai_pic.jpg",
+            "fullTime": 1,
+            "fullTimeAvailability": 1,
+            "fullTimePrice": 1477,
+            "generativeProfilePicOptedIn": 1,
+            "githubData": null,
+            "githubStats": {
+                "followerCount": 4,
+                "githubStatsId": "99fa3fdf-7bdf-4378-9507-4dade0324920",
+                "mostComplexRepo": null,
+                "oneYearContributions": {
+                    "endedAt": "2024-03-19T18:29:59Z",
+                    "hasAnyContributions": true,
+                    "popularIssueContribution": null,
+                    "popularPullRequestContribution": null,
+                    "restrictedContributionsCount": 0,
+                    "startedAt": "2023-03-18T18:30:00Z",
+                    "totalCommitContributions": 18,
+                    "totalIssueContributions": 0,
+                    "totalPullRequestContributions": 0,
+                    "totalPullRequestReviewContributions": 0,
+                    "totalRepositoriesWithContributedCommits": 5,
+                    "totalRepositoriesWithContributedIssues": 0,
+                    "totalRepositoriesWithContributedPullRequestReviews": 0,
+                    "totalRepositoriesWithContributedPullRequests": 0,
+                    "totalRepositoryContributions": 6
+                },
+                "overallLanguageStats": {
+                    "C": {
+                        "percentage": 0.96,
+                        "size": 22953
+                    },
+                    "C++": {
+                        "percentage": 0.77,
+                        "size": 18596
+                    },
+                    "CSS": {
+                        "percentage": 2.79,
+                        "size": 66966
+                    },
+                    "HTML": {
+                        "percentage": 71.34,
+                        "size": 1713163
+                    },
+                    "JavaScript": {
+                        "percentage": 13.26,
+                        "size": 318391
+                    },
+                    "PHP": {
+                        "percentage": 0.06,
+                        "size": 1341
+                    },
+                    "PowerShell": {
+                        "percentage": 0.01,
+                        "size": 209
+                    },
+                    "SCSS": {
+                        "percentage": 1.26,
+                        "size": 30156
+                    },
+                    "Shell": {
+                        "percentage": 0.01,
+                        "size": 202
+                    },
+                    "Solidity": {
+                        "percentage": 0.11,
+                        "size": 2706
+                    },
+                    "TypeScript": {
+                        "percentage": 9.44,
+                        "size": 226814
+                    }
+                },
+                "starCount": 0
+            },
+            "isActive": 0,
+            "name": "A. B. ",
+            "newScore": 4,
+            "partTime": 0,
+            "partTimeAvailability": -1,
+            "partTimePrice": 0,
+            "profilePic": "https://storage.googleapis.com/pic-gen/499bd8dc-6ea0-11ee-8bff-42010a400007_itv_pic.jpg",
+            "projects": [
+                {
+                    "description": "Raksha dial is a AI technology tool to report rash driving and save lives on the roads. Used Technologies - React, TypeScript, Redux, Tailwind, Material UI, Axios",
+                    "endDate": "2023",
+                    "link": "",
+                    "projectId": "b2b7093e-e976-11ee-ad6f-42010a40003b",
+                    "resumeId": "8508621c-b366-4b9f-b3f0-7665dce8e3b0",
+                    "startDate": "2023",
+                    "title": "Raksha Dial"
+                },
+                {
+                    "description": "One stop Solution for Car Services. Website to book car services based on car model and city. Used Technologies - React, Redux, TypeScript, Material UI, Axios",
+                    "endDate": "2023",
+                    "link": "",
+                    "projectId": "b2b75f08-e976-11ee-ad6f-42010a40003b",
+                    "resumeId": "8508621c-b366-4b9f-b3f0-7665dce8e3b0",
+                    "startDate": "2023",
+                    "title": "Automovill"
+                },
+                {
+                    "description": "Developed a ecommerce website for mobiles, laptops and other services. Technologies used - React, TypeScript, Redux, NodeJs, ExpressJs, MongoDB",
+                    "endDate": "2023",
+                    "link": "",
+                    "projectId": "b2b7a123-e976-11ee-ad6f-42010a40003b",
+                    "resumeId": "8508621c-b366-4b9f-b3f0-7665dce8e3b0",
+                    "startDate": "2023",
+                    "title": "VirtuCart"
+                }
+            ],
+            "rerank_score": 0.811676,
+            "rerank_summary": "\nEducation:\nReceived BTech in Computer and Communications Engineering, from Manipal University Jaipur during (2020-2024)\n\nWork Experience:\nWorked as Front-End Developer at Highway Delite, during (2023-Present); Worked as ReactJs Developer at Grasim B2B Ecommerce, Aditya Birla, during (2023-2023); Worked as Front-End Developer at Pietech Labs, during (2022-2023)\nAwards Received: Hack The League\nSkills proficient in: React, Redux, TypeScript, JavaScript, HTML/CSS\n\nCountry: India",
+            "resumeId": "8508621c-b366-4b9f-b3f0-7665dce8e3b0",
+            "skills": [
+                "React",
+                "Redux",
+                "TypeScript",
+                "JavaScript",
+                "HTML/CSS"
+            ],
+            "summary": "Led ReactJS projects for B2B platform at Aditya Birla Group subsidiary.",
+            "userId": "499bd8dc-6ea0-11ee-8bff-42010a400007",
+            "videoRecording": "https://storage.cloud.google.com/ai_interviewer_recordings/daily_e015df99-cf10-11ee-a4ba-42010a400021.mp4",
+            "workExperience": [
+                {
+                    "company": "Highway Delite",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-highway-delite.jpeg",
+                    "companyWebsite": null,
+                    "description": "Spearheaded the transition to React and created reusable components to improve website performance. Implemented Redux for streamlined state management, facilitating seamless data flow.",
+                    "endDate": "Present",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://www.linkedin.com/company/highway-delite",
+                    "locationCity": "Bangalore",
+                    "locationCountry": "India",
+                    "rateGrammar": 3,
+                    "resumeId": "8508621c-b366-4b9f-b3f0-7665dce8e3b0",
+                    "role": "Front-End Developer",
+                    "startDate": "2023",
+                    "workExperienceId": "b2637073-e976-11ee-ad6f-42010a40003b",
+                    "work_exp": 2,
+                    "yearsWorked": 1
+                },
+                {
+                    "company": "Grasim B2B Ecommerce, Aditya Birla",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-grasim-b2b-ecommerce-aditya-birla.jpeg",
+                    "companyWebsite": null,
+                    "description": "Frontend Proficiency: Led ReactJS projects, optimizing code for responsive interfaces and superior user experience. B2B Implementation: Applied B2B insights to develop tailored features, enhancing B2B interactions within the platform.",
+                    "endDate": "2023",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://www.linkedin.com/company/birlapivot",
+                    "locationCity": "Bangalore",
+                    "locationCountry": "India",
+                    "rateGrammar": 3,
+                    "resumeId": "8508621c-b366-4b9f-b3f0-7665dce8e3b0",
+                    "role": "ReactJs Developer",
+                    "startDate": "2023",
+                    "workExperienceId": "b263bf5e-e976-11ee-ad6f-42010a40003b",
+                    "work_exp": 3,
+                    "yearsWorked": 0
+                },
+                {
+                    "company": "Pietech Labs",
+                    "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-pietech-labs.jpeg",
+                    "companyWebsite": null,
+                    "description": "Developed and designed an engaging and user-friendly ecommerce website for an ice cream company using React, Tailwind, and MaterialUI for the front-end design and Redux for state management. Integrated with a backend system for product inventory management and order processing.",
+                    "endDate": "2023",
+                    "isCompanyInWest": 0,
+                    "isStartupFounder": 0,
+                    "linkedInUrl": "https://www.linkedin.com/company/pietech-labs",
+                    "locationCity": "Bangalore",
+                    "locationCountry": "India",
+                    "rateGrammar": 3,
+                    "resumeId": "8508621c-b366-4b9f-b3f0-7665dce8e3b0",
+                    "role": "Front-End Developer",
+                    "startDate": "2022",
+                    "workExperienceId": "b264010e-e976-11ee-ad6f-42010a40003b",
+                    "work_exp": 2,
+                    "yearsWorked": 1
+                }
+            ],
+            "yearsOfWorkExperience": 2
+        }
+    ],
+    "chat_history": [
+        "{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"HumanMessage\"], \"kwargs\": {\"content\": \"I want someone for $5k/month who has skills with C++\"}}",
+        "{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"AIMessage\"], \"kwargs\": {\"content\": \"Candidates successfully returned for the given query. I was able to find candidates who meet your requirements. Would you like to refine the search with additional criteria, such as work availability, skills, budget, or start time?\"}}",
+        "{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"HumanMessage\"], \"kwargs\": {\"content\": \"react developer\"}}",
+        "{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"AIMessage\"], \"kwargs\": {\"content\": \"Candidates successfully returned for the given query. I was able to find candidates who meet your requirements. Would you like to refine the search with additional criteria, such as work availability, skills, budget, or start time?\"}}",
+        "{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"HumanMessage\"], \"kwargs\": {\"content\": \"only b.tech\"}}",
+        "{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"AIMessage\"], \"kwargs\": {\"content\": \"Candidates successfully returned for the given query. I was able to find candidates who meet your requirements. Would you like to refine the search with additional criteria, such as work availability, skills, budget, or start time?\"}}",
+        "{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"HumanMessage\"], \"kwargs\": {\"content\": \"fullt time\"}}",
+        "{\"lc\": 1, \"type\": \"constructor\", \"id\": [\"langchain\", \"schema\", \"messages\", \"AIMessage\"], \"kwargs\": {\"content\": \"Candidates successfully returned for the given query. I was able to find candidates who meet your requirements. Would you like to refine the search with additional criteria, such as work availability, skills, budget, or start time?\"}}"
+    ]
+}
