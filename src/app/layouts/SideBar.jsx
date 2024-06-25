@@ -39,9 +39,9 @@ export default function SideBar() {
           </NavLink>
         </div>
         <div className="logo-details">
-          <NavLink to="/bookmark">
-            <img src={activeLocation === "/bookmark" ? BookmarkActive : Bookmark} alt={t('bookmarkSymbol')} />
-            <p className="logo_name">{t('tBookMark')}</p>
+          <NavLink to="/shortlisted">
+            <img src={activeLocation === "/shortlisted" ? BookmarkActive : Bookmark} alt={t('bookmarkSymbol')} />
+            <p className="logo_name">{t('tShortlisted')}</p>
           </NavLink>
         </div>
         <div>
