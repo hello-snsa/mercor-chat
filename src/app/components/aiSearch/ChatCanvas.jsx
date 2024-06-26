@@ -4,6 +4,7 @@ import { ChatHero } from '../../../assets/images'
 import { BASE_URL, CHAT_HISTORY, TOKEN_URL } from '../../../utils/apiConstants';
 import axios from 'axios';
 import CandidateCard from './CandidateCard';
+import getToken from '../../../utils/getToken';
 
 export default function ChatCanvas({ userQuery }) {
   const bottomRef = useRef(null);
@@ -36,25 +37,8 @@ export default function ChatCanvas({ userQuery }) {
       console.log(error);
       //TODO: add a toast message.
       if (error.response.status === 401) {
-        getToken();
+        getToken(getChatHistory);
       }
-    }
-  }
-  const getToken = async () => {
-    try {
-      const response = await axios.post(TOKEN_URL,
-
-        {
-          "grant_type": "refresh_token",
-          "refresh_token": localStorage.getItem('MercorRefreshToken'),
-        }
-      )
-      console.log("response of token===>", response);
-      localStorage.setItem('MercorUserToken', response?.data?.access_token);
-      localStorage.setItem('MercorRefreshToken', response?.data?.refresh_token);
-      getChatHistory();
-    } catch (error) {
-      console.log(error);
     }
   }
 
@@ -78,7 +62,6 @@ export default function ChatCanvas({ userQuery }) {
 
   useEffect(() => {
     userQuery !== "" && getChatHistory();
-    // setChatData(data)
   }, [userQuery])
 
   console.log("chatData", chatData);

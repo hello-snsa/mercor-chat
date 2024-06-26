@@ -11,7 +11,9 @@ export default function SideBar() {
   const [activeLocation, setActiveLocation] = useState("");
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("MercorUserToken");
+    localStorage.removeItem("MercorRefreshToken");
+
     window.location.href = "/login";
   }
 

@@ -5,15 +5,15 @@ import ProfileCard from './ProfileCard';
 
 export default function CandidateCard({ candidateData }) {
 
-    const { profilePic, name, skills, country, yearsOfWorkExperience, summary, fullTime, partTime } = candidateData;
+    const { profilePic,finalImageUrl, name, skills, country, yearsOfWorkExperience, summary, fullTime, partTime,status } = candidateData;
 
-    const [isShortlisted, setIsShortlisted] = useState(false);
+    const [isShortlisted, setIsShortlisted] = useState(status==="shortlisted"?true:false);
+    const [toggleView, setToggleView] = useState(false);
 
     const handleShortlist = () => {
         setIsShortlisted(!isShortlisted);
         //TODO: Make api call to shortlist candidate.
     }
-    const [toggleView, setToggleView] = useState(false);
 
     const handleToggleView = () => {
         setToggleView(!toggleView);
@@ -25,7 +25,7 @@ export default function CandidateCard({ candidateData }) {
                 <div className='chatCanvas_message_candidate_top'>
                     <div className='chatCanvas_message_candidate_topLeft'>
                         <span className='chatCanvas_message_candidate_image'>
-                            <img src={profilePic} alt={name} className='' />
+                            <img src={finalImageUrl} alt={name} className='' />
                         </span>
 
                         <span className='chatCanvas_message_candidate_name'>{name}</span>
@@ -41,8 +41,7 @@ export default function CandidateCard({ candidateData }) {
                                 color: isShortlisted ?
                                     "#4A00E0" : "white", backgroundColor: isShortlisted ? "#CED2D8" : "#6E49BD"
                             }} onClick={handleShortlist}>
-                                <img src={isShortlisted ? BookmarkActive : BookmarkWhite} alt='Bookmark' />
-                                {/* <Bookmark/> */}
+                                <img src={isShortlisted ? BookmarkActive : BookmarkWhite} alt='Shortlisted' />
                                 {isShortlisted ? "Shortlisted" : "Shortlist"}
                             </button>
                         </div>
@@ -81,7 +80,7 @@ export default function CandidateCard({ candidateData }) {
 
 CandidateCard.propTypes = {
     candidateData: PropTypes.shape({
-        profilePic: PropTypes.string.isRequired,
+        finalImageUrl: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         skills: PropTypes.arrayOf(PropTypes.string).isRequired,
         country: PropTypes.string.isRequired,

@@ -1,0 +1,116 @@
+[
+    {
+        "profilePic": "https://storage.googleapis.com/pic-gen/6e8310f6-cfad-11ee-a4ba-42010a400021_itv_pic.jpg",
+        "userId": "6e8310f6-cfad-11ee-a4ba-42010a400021",
+        "name": "S. S.",
+        "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+        "yearsOfWorkExperience": 4,
+        "skills": [
+            "React",
+            "TypeScript",
+            "JavaScript",
+            "Node.js",
+            "Angular"
+        ],
+        "isActive": 0,
+        "videoRecording": "https://storage.cloud.google.com/ai_interviewer_recordings/daily_79ab7d55-cfad-11ee-a4ba-42010a400021.mp4",
+        "summary": "Led No-Code Application development, significantly reducing dev time at Media.net.",
+        "fullTime": 1,
+        "fullTimeAvailability": 2,
+        "fullTimePrice": 4296,
+        "partTime": 1,
+        "partTimeAvailability": 2,
+        "partTimePrice": 3580,
+        "country": "India",
+        "generativeProfilePicOptedIn": 1,
+        "finalImageUrl": "https://storage.googleapis.com/pic-gen/6e8310f6-cfad-11ee-a4ba-42010a400021_ai_pic.jpg",
+        "phone": null,
+        "email": null,
+        "links": null,
+        "githubUsername": null,
+        "linkedin": null,
+        "awards": [],
+        "workExperience": [
+            {
+                "workExperienceId": "1ceb2ef7-e95e-11ee-ad6f-42010a40003b",
+                "company": "Media.net",
+                "startDate": "2022",
+                "endDate": "Present",
+                "description": "Led the development of a No-Code Application using ReactJs, TypeScript, Zustand, enabling developers to swiftly create templates, significantly reducing development time from 5 days to 1 hour. Wireframed and Developed reusable and editable table component with complex filters, incorporated tools and integrated APIs to manage ad campaign cost of 10,000+ customers. Created a location filter plugins with OpenStreetMap integration for 5+ WordPress sites using PHP and JavaScript, utilizing ES6 methods. Collaborate with Product Managers, Web Designers and Software Engineers to deliver compelling 10+ user-facing blog websites. Conducted peer code reviews. Built a tool to efficiently manage and clone ad templates across over 30 GitLab repos. Utilized ReactJS, GitLab APIs and Google OAuth, reducing developer workload from 18 hours to 2 hours.",
+                "locationCity": "Mumbai",
+                "locationCountry": "India",
+                "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                "role": "UI Developer 2",
+                "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-media-net.jpeg",
+                "linkedInUrl": "https://www.linkedin.com/company/media.net",
+                "companyWebsite": null,
+                "isCompanyInWest": 0,
+                "isStartupFounder": 0,
+                "rateGrammar": 3,
+                "rateRolePrestige": 4,
+                "yearsWorked": 2,
+                "work_exp": 4
+            },
+            {
+                "workExperienceId": "1ceb8f35-e95e-11ee-ad6f-42010a40003b",
+                "company": "QBurst",
+                "startDate": "2020",
+                "endDate": "2022",
+                "description": "Debugged and resolved canvas rendering issue, resulting in loading speed by 70%. Implemented comprehensive unit and integration testing strategies using Jest in NodeJs. Integrated Two-Factor Authentication, following protocols to enhancing app security through both email and Twilio SMS integration for 1000+ businesses. Integrated Google Maps with dynamic elements, crafted reusable and scalable components for seamless user location retrieval, and implemented captivating custom map pin logic. Upgraded Angular 9 to 12, fixing package issues, which resulted in % improved page load. Built user tours and on-boarding using Shephard and wrote necessary APIs in NodeJS, to improve user experience.",
+                "locationCity": "Kerala",
+                "locationCountry": "India",
+                "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                "role": "Software Engineer",
+                "companyLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-qburst.jpeg",
+                "linkedInUrl": "https://www.linkedin.com/company/qburst",
+                "companyWebsite": null,
+                "isCompanyInWest": 0,
+                "isStartupFounder": 0,
+                "rateGrammar": 2,
+                "rateRolePrestige": 2,
+                "yearsWorked": 2,
+                "work_exp": 2
+            }
+        ],
+        "education": [
+            {
+                "educationId": "1d237daf-e95e-11ee-ad6f-42010a40003b",
+                "degree": "BTech",
+                "major": "Electronics and Communication Engineering",
+                "startDate": "2016",
+                "endDate": "2020",
+                "grade": "",
+                "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                "school": "Sreechithra Thirunal College of Engineering",
+                "linkedInUrl": "",
+                "schoolLogo": "https://linkedin-company-logos.s3.amazonaws.com/company-school-sreechithra-thirunal-college-of-engineering.jpeg",
+                "isUniversityInWest": 0,
+                "rateDegree": 2,
+                "rateGPA": 0,
+                "rateUniversityPrestige": 2
+            }
+        ],
+        "projects": [
+            {
+                "projectId": "1d2ff9c7-e95e-11ee-ad6f-42010a40003b",
+                "title": "FormBuilder",
+                "description": "A no code drag and drop form builder built with NextJs, React, Prisma, Tailwind and dnt kit. Used to create forms, share generated link and view submissions.",
+                "link": "",
+                "endDate": "",
+                "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                "startDate": ""
+            },
+            {
+                "projectId": "1d30475f-e95e-11ee-ad6f-42010a40003b",
+                "title": "Multikart",
+                "description": "An e-commerce website with admin dashboard built using Angular and NodeJs. Created user authentication, built tables, filters, user management and handle cart.",
+                "link": "",
+                "endDate": "",
+                "resumeId": "180e5903-9645-4719-9239-a34f0659ad5e",
+                "startDate": ""
+            }
+        ],
+        "githubStats": null,
+        "githubData": null
+    }
+]

@@ -10,12 +10,18 @@ import Logout from './icons/logout.svg';
 import HireIcon from './icons/hire.png';
 import LoginHero from './loginHero.png';
 import ChatHero from './chatHero.png';
+import Logo from './logo.png';
+import SearchPage from './searchPage.png';
+import DottedLine from './dottedLine.png';
+import LoginSS from './loginSS.png';
+import SearchBarSS from './searchBarSS.png';
 
 export {
     HomeIcon,
     HomeIconActive,
     Search,
     SearchActive,
+    SearchPage,
     Bookmark,
     BookmarkWhite,
     BookmarkActive,
@@ -23,6 +29,10 @@ export {
     Logout,
     SearchIcon,
     ChatHero,
-    HireIcon
+    DottedLine,
+    HireIcon,
+    Logo,
+    LoginSS,
+    SearchBarSS
 
 }
