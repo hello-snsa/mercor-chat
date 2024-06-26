@@ -2,6 +2,8 @@ import { t } from "i18next";
 import { useEffect, useState } from "react";
 import AiSearch from "./AiSearch";
 import { REFRESH_TOKEN, TOKEN } from "../../utils/Constants";
+import toast from "../../utils/toast";
+import { ToastContainer } from 'react-toastify';
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -28,12 +30,13 @@ export default function Login() {
         }else{
             console.log("Invalid email or password")
             //TODO: add toast.
+            toast('Invalid email or password','error');
         }
     }
 
     useEffect(() => {
         const emailReg = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-        const passwordReg = /^[a-zA-Z0-9]{8,}$/;
+        const passwordReg = /^[a-zA-Z0-9]{6,}$/;
 
         if (emailReg.test(email)) {
             setIsEmailValid(true);
@@ -58,6 +61,7 @@ if(localStorage.getItem("MercorUserToken")){
 
     return (
         <div>
+             <ToastContainer />
             <div></div>
             <div>
                 <h2>{t("Welcome to Marcus AI")}</h2>
