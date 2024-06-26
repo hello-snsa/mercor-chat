@@ -43,6 +43,10 @@ height: 3rem;
 }
 .routes{
   margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 /* Flex */
 .flex {
@@ -57,10 +61,18 @@ height: 3rem;
 }
 .flex-jc-sb{
   justify-content: space-between;
-
 }
 .flex-jc-r{
   justify-content: right;
+}
+.flex-jc-l{
+  justify-content: left;
+}
+.flex-jc-c{
+  justify-content: center;
+}
+.flex-jc-sa{
+  justify-content: space-around;
 }
 .flex-space-between {
   justify-content: space-between;
@@ -69,6 +81,9 @@ height: 3rem;
   justify-content: space-around;
 }
 .flex-align-center {
+  align-items: center;
+}
+.flex-ai-c {
   align-items: center;
 }
 .flex-align-start {

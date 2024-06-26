@@ -17,6 +17,9 @@
     "step-2-1":"Start typing your query",
     "step-2-2":"For ex. 'I need a react developer'",
     "step-2-3":"Top talented developer will be displayed to you.",
+    "searchPlaceholder":"Search talent",
+    "searchIconAlt":"white arrow head inside a purple circle",
+    "somethingWentWrong":"Something went wrong. Please try again later.",
 
 
     "":""

@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
-
-import { ChatHero } from '../../../assets/images'
-import { BASE_URL, CHAT_HISTORY, TOKEN_URL } from '../../../utils/apiConstants';
+import PropTypes from 'prop-types';
 import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
+import { t } from 'i18next';
+
 import CandidateCard from './CandidateCard';
 import getToken from '../../../utils/getToken';
+import { ChatHero } from '../../../assets/images'
+import { BASE_URL, CHAT_HISTORY } from '../../../utils/apiConstants';
+import toast from '../../../utils/toast';
 
 export default function ChatCanvas({ userQuery }) {
   const bottomRef = useRef(null);
@@ -14,8 +18,6 @@ export default function ChatCanvas({ userQuery }) {
 
   const getChatHistory = async () => {
     try {
-      console.log("json token", localStorage.getItem('MercorUserToken'));
-      // fetch chat history from API
       const response = await axios.post(`${BASE_URL}${CHAT_HISTORY}`,
         {
           "input": userQuery,
@@ -30,14 +32,13 @@ export default function ChatCanvas({ userQuery }) {
             'Authorization': `Bearer ${localStorage.getItem('MercorUserToken')}`
           },
         })
-
-      console.log("response of chat===>", response);
       setChatData(response?.data)
     } catch (error) {
-      console.log(error);
-      //TODO: add a toast message.
       if (error.response.status === 401) {
         getToken(getChatHistory);
+      }
+      else {
+        toast(t("somethingWentWrong"), "error")
       }
     }
   }
@@ -54,8 +55,6 @@ export default function ChatCanvas({ userQuery }) {
     })
   }, [chatData])
 
-  console.log("messages==>", messages);
-
   useEffect(() => {
     userQuery !== "" && bottomRef?.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages])
@@ -64,9 +63,9 @@ export default function ChatCanvas({ userQuery }) {
     userQuery !== "" && getChatHistory();
   }, [userQuery])
 
-  console.log("chatData", chatData);
   return (
     <div className='chatCanvas'>
+      <ToastContainer />
       {messages?.length <= 0 ?
         <>
           <img src={ChatHero} alt='Purple banner showing world map with dots and also a man sitting on chair working with his laptop and few books are also stacked on table.'
@@ -106,4 +105,8 @@ export default function ChatCanvas({ userQuery }) {
       </div>
     </div>
   )
+}
+
+ChatCanvas.propTypes = {
+  userQuery: PropTypes.string
 }

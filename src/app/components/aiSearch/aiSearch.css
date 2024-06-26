@@ -3,23 +3,23 @@
 }
 /* SearchBar */
 .aiSearch_SearchBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 5rem;
-  background-color: #EAE1FE;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* margin-bottom: 20px; */
-  position: fixed;
-  bottom:0;
+    display: flex; 
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 5rem;
+    padding-top: 1rem;
+    background-color: #EAE1FE;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom:0;
     left:0;
 }
 .aiSearch_searchField {
     width: 100%;
-    height: 100%;
     padding: 0 2rem;
     border: none;
     background-color: transparent;
@@ -28,17 +28,16 @@
     outline: none;
     display: flex;
     align-items: center;
-    /* background-color: blueviolet; */
 }
 .aiSearch_tags {
     display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0.5rem 2rem;
-  width: 100%;
-  height: 100%;
-  margin-left: 3rem;
-  color:grey;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    height: 4rem;
+    margin-left: 3rem;
+    color:grey;
 }
 .aiSearch_tag{
     display: flex;
@@ -49,21 +48,18 @@
     padding: 0.5rem 1rem;
     margin: 0.5rem;
     border-radius: 24px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     cursor: pointer;
 }
 .aiSearch_searchField_input {
     width: 100%;
-    height: 100%;
     padding: 1rem 2rem;
     margin: 1.5rem;
     margin-top: 0.5rem;
     border: none;
-    background-color: transparent;
     font-size: 16px;
     color: #333;
     outline: none;
-    background-color: #fff;
     border-radius: 24px;
 }
 
@@ -219,20 +215,25 @@
 @media screen and (max-width: 768px) {
     .aiSearch_SearchBar {
         padding: 0 2rem;
+        position: relative;
+        bottom: 10rem;
     }
     .aiSearch_searchField {
         padding: 0 1rem;
     }
     .aiSearch_tags {
         padding: 0.5rem 1rem;
+        width: 100vw;
+        overflow: hidden;
+        height: 10rem;
+        /* margin-bottom: -5rem; */
     }
     .aiSearch_tag {
         padding: 0.5rem 0.5rem;
         margin: 0.5rem;
     }
     .aiSearch_searchField_input {
-        padding: 1rem 1rem;
-        margin: 1.5rem;
+        padding: 1rem;
     }
     .chatCanvas {
         padding: 0 2rem;
@@ -240,10 +241,6 @@
         position: relative;
         top: 0;
         left: 0;
-    }
-    .aiSearch_SearchBar {
-        /* padding: 0 1rem; */
-        position: relative;
     }
     .chatCanvas_hero{
         display: none;
