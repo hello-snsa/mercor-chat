@@ -71,10 +71,6 @@ export default function ChatCanvas({ userQuery }) {
         <>
           <img src={ChatHero} alt='Purple banner showing world map with dots and also a man sitting on chair working with his laptop and few books are also stacked on table.'
             className='chatCanvas_hero' />
-          {/* <div className='chatCanvas_message'>
-        <div className='chatCanvas_message_sender'>AI</div>
-      <div className='chatCanvas_message_text'>Hello! How can I help you today?</div> 
-       </div>  */}
         </>
         : null
       }

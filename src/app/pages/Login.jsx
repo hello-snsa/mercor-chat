@@ -6,7 +6,6 @@ import AiSearch from "./AiSearch";
 import { REFRESH_TOKEN, TOKEN } from "../../utils/Constants";
 import toast from "../../utils/toast";
 import { ToastContainer } from 'react-toastify';
-import Header from "../layouts/Header";
 import { LoginHero } from "../../assets/images";
 
 export default function Login() {
@@ -66,9 +65,6 @@ export default function Login() {
     return (
         <div className="login">
             <ToastContainer />
-            <div>
-                <Header />
-            </div>
             <div className="login_card">
                 <div >
                     <img src={LoginHero} alt="Marcus AI" className="login_card-img" />
@@ -112,7 +108,7 @@ export default function Login() {
                             />
                         </div>
                         
-                        <div className="flex mt-2r">
+                        <div className="flex mt-1r flex-jc-r">
                             <button
                                 className="btn-primary login-btn"
                                 id="login"

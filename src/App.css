@@ -1,8 +1,6 @@
 .app-container{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-
+  /* position: relative; */
+  /* min-height: 100vh; */
 }
 .btn-primary {
   background-color: #6E49BD;
@@ -43,7 +41,9 @@ width: 3rem;
 height: 3rem;
 
 }
-
+.routes{
+  margin-top: 6rem;
+}
 /* Flex */
 .flex {
   display: flex;
@@ -58,6 +58,9 @@ height: 3rem;
 .flex-jc-sb{
   justify-content: space-between;
 
+}
+.flex-jc-r{
+  justify-content: right;
 }
 .flex-space-between {
   justify-content: space-between;
@@ -276,12 +279,12 @@ height: 3rem;
 }
 @media screen and (max-width: 768px){
 
-.app-header{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-}
+  /* .app-header{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+  } */
 }
 
 

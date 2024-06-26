@@ -4,6 +4,7 @@ import Routes from './routes/Routes'
 import SideBar from './app/layouts/SideBar'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import Header from './app/layouts/Header'
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -16,14 +17,18 @@ function App() {
 
   return (
     <div className='app-container'>
-      <ErrorBoundary>
-        {currentLocation!="/login"?<div className='app-header'>
-        <SideBar />
-        </div>:null}
-      </ErrorBoundary>
-      <ErrorBoundary>
-        <Routes />
-      </ErrorBoundary>
+      <Header />
+      <div className='flex '>
+        <ErrorBoundary>
+          {currentLocation != "/login" ? 
+            <SideBar />: null}
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <div className='routes'>
+          <Routes />
+          </div>
+        </ErrorBoundary>
+      </div>
     </div>
   )
 }

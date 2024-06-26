@@ -1,4 +1,3 @@
-import React from 'react'
 import { t } from 'i18next'
 
 import './header.css'
@@ -24,7 +23,7 @@ export default function Header() {
                 {currentPage !== "/login" &&
                     !localStorage.getItem("MercorUserToken")
                     ? <Link to="/login" >
-                        <button className="login-btn btn-primary">Login</button>
+                        <button className="login-btn btn-primary">{t('tLogin')}</button>
                     </Link> : null}
             </div>
         </header>
