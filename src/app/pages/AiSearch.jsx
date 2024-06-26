@@ -6,14 +6,15 @@ import { useState } from "react";
 
 export default function AiSearch() {
   const [userQuery, setUserQuery] = useState('');
+  const [messages, setMessages] = useState([]);
 
   return (
     <div className="aiSearch">
       <ErrorBoundary>
-        <ChatCanvas userQuery={userQuery} />
+        <ChatCanvas userQuery={userQuery} messages={messages} setMessages={setMessages} />
       </ErrorBoundary>
       <ErrorBoundary>
-        <SearchBar setUserQuery={setUserQuery} />
+        <SearchBar userQuery={userQuery}setUserQuery={setUserQuery} setMessages={setMessages}/>
       </ErrorBoundary>
     </div>
   )

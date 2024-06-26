@@ -5,7 +5,7 @@ import { t } from 'i18next';
 import './aiSearch.css';
 import { SearchIcon } from '../../../assets/images';
 
-export default function SearchBar({ setUserQuery }) {
+export default function SearchBar({ userQuery,setUserQuery, setMessages}) {
     const tempTags = ["react developer", "3 years Experience", "Full time only", "Part time only", "Budget is 5000", "Education : B.tech"];
 
     const [userInput, setUserInput] = useState('');
@@ -20,11 +20,21 @@ export default function SearchBar({ setUserQuery }) {
 
     const handleSearch = () => {
         setUserQuery(userInput);
+        setMessages(prev => {
+            return [...prev, {
+                "senderText": userInput || ""
+            }]
+        })
         setUserInput('');
     }
 
     const handleTagClick = (tag) => {
         setUserQuery(tag);
+        setMessages(prev => {
+            return [...prev, {
+                "senderText": tag || ""
+            }]
+        })
         // TODO: Add tag to search query
     }
     useEffect(() => {
