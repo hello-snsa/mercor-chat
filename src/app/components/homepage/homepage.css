@@ -2,30 +2,6 @@
     background-color: #6E49BD;
     overflow-x: hidden;
 }
-.homepage-header{
-    display: flex;
-    background-color: #5F3DA7;
-    padding: 2rem;
-    font-size: large;
-    height: 6rem;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-}
-  
-.logo-img{
-    width: 6rem;
-    height: 6rem;
-  }
-  
-  .logo-logo-text{
-    display: flex;
-    gap: 1rem;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
   
   .nav{
     display: flex;
@@ -43,24 +19,6 @@
     background-color: cornflowerblue;
     color: white;
     font-size: large;
-  }
-  
-  .header-last-column{
-    display: flex;
-    gap: 1rem;
-    color: white;
-    align-items: center;
-    justify-content: end;
-    width: 50%;
-  }
-  
-  .login-btn{
-    padding: 1rem;
-    width: 12rem;
-    border-radius: 5px;
-    background-color: #4B22A2;
-    border: none;
-    color: white;
   }
   
   .homepage-body{

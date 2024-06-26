@@ -1,9 +1,13 @@
 import { t } from "i18next";
 import { useEffect, useState } from "react";
+
+import '../components/login/login.css';
 import AiSearch from "./AiSearch";
 import { REFRESH_TOKEN, TOKEN } from "../../utils/Constants";
 import toast from "../../utils/toast";
 import { ToastContainer } from 'react-toastify';
+import Header from "../layouts/Header";
+import { LoginHero } from "../../assets/images";
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -22,15 +26,15 @@ export default function Login() {
     }
 
     const handleLogin = () => {
-        if ( email==="ali@test.com" && password==="123456") {
+        if (email === "ali@test.com" && password === "123456") {
             localStorage.setItem("email", email);
             localStorage.setItem("MercorUserToken", TOKEN);
             localStorage.setItem("MercorRefreshToken", REFRESH_TOKEN);
             window.location.href = "/ai-search";
-        }else{
+        } else {
             console.log("Invalid email or password")
             //TODO: add toast.
-            toast('Invalid email or password','error');
+            toast('Invalid email or password', 'error');
         }
     }
 
@@ -54,58 +58,73 @@ export default function Login() {
 
     }, [email, password])
 
-if(localStorage.getItem("MercorUserToken")){
-    window.location.href = "/ai-search";
-    return <AiSearch/>
-}
+    if (localStorage.getItem("MercorUserToken")) {
+        window.location.href = "/ai-search";
+        return <AiSearch />
+    }
 
     return (
-        <div>
-             <ToastContainer />
-            <div></div>
+        <div className="login">
+            <ToastContainer />
             <div>
-                <h2>{t("Welcome to Marcus AI")}</h2>
-                {/* Email/Phone */}
-                <p>{t('LoreLorem ipsum dolor sit amet consectetur adipisicing elit. In, amet?m10')}</p>
-
-                <div>
+                <Header />
+            </div>
+            <div className="login_card">
+                <div >
+                    <img src={LoginHero} alt="Marcus AI" className="login_card-img" />
+                </div>
+                <div className=" flex flex-column gap-5">
                     <div>
-                        <label
-                            htmlFor="email-phone"
-                            className="label"
-                            id="email-phone"
-                        >{t('Email/Phone')}</label>
-                        <input type="text"
-                            className="input"
-                            id="email-phone"
-                            placeholder={t('Enter your email or phone number')}
-                            onChange={handleEmail}
-                        />
+                    <p className="login_header">{t("Welcome to Marcus AI")}</p>
                     </div>
-                    <div>
-                        <label
-                            htmlFor="password"
-                            className="label"
-                            id="password"
-                        >{t('Password')}</label>
-                        <input type="password"
-                            className="input"
-                            id="password"
-                            placeholder={t('Enter your password')}
-                            onChange={handlePassword}
-                        />
-                    </div>
-                    <div>
-                        <button
-                            className="button"
-                            id="login"
-                            onClick={handleLogin}
-                            disabled={!(isEmailValid && isPasswordValid)}
-                        >{t('Login')}</button>
+                    {/* Email/Phone */}
+                    <div className="flex flex-column gap-5 flex-jc-sb">
+                    <p className="bold">
+                        {t("Login to your account")}
+                    </p>
+
+                    <div className="flex flex-column gap-2">
+                        <div className="flex flex-column gap-1">
+                            <label
+                                htmlFor="email-phone"
+                                className="label"
+                                id="email-phone"
+                            >{t('Email/Phone')}</label>
+                            <input type="text"
+                                className="login_input"
+                                id="email-phone"
+                                placeholder={t('Enter your email or phone no.')}
+                                onChange={handleEmail}
+                            />
+                        </div>
+                        
+                        <div className="flex flex-column gap-1">
+                            <label
+                                htmlFor="password"
+                                className="label"
+                                id="password"
+                            >{t('Password')}</label>
+                            <input type="password"
+                                className="login_input"
+                                id="password"
+                                placeholder={t('Enter your password')}
+                                onChange={handlePassword}
+                            />
+                        </div>
+                        
+                        <div className="flex mt-2r">
+                            <button
+                                className="btn-primary login-btn"
+                                id="login"
+                                onClick={handleLogin}
+                                disabled={!(isEmailValid && isPasswordValid)}
+                            >{t('Login')}</button>
 
 
-                    </div>
+                        </div>
 
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

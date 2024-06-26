@@ -2,25 +2,17 @@
 import { t } from 'i18next'
 
 import '../components/homepage/homepage.css';
-import { Logo, SearchPage, DottedLine, LoginSS, SearchBarSS } from '../../assets/images';
+import { SearchPage, LoginSS, SearchBarSS } from '../../assets/images';
 import Footer from '../layouts/Footer';
 import { Link } from 'react-router-dom';
+import Header from '../layouts/Header';
 
 
 export default function Homepage() {
 
   return (
     <div className='homepage'>
-      <div className="homepage-header flex flex-align-center flex-justify-space-between flex-justify-space-between flex-jc-sb" >
-        <div className="logo-logo-text">
-          <img className="logo-img" src={Logo} />
-          <h2>MARCUS</h2>
-        </div>
-
-        <div className="header-last-column">
-          <button className="login-btn btn-primary">Login</button>
-        </div>
-      </div>
+      <Header />
       <div className="homepage-body">
         <div className="homepage-topSection">
           <span className="homepage-headingText">

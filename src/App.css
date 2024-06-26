@@ -12,6 +12,14 @@
   border-radius: 2.4rem;
   cursor: pointer;
 }
+.login-btn{
+  padding: 1rem;
+  width: 12rem;
+  border-radius: 5px;
+  background-color: #4B22A2;
+  border: none;
+  color: white;
+}
 .btn-hidden-outline {
   border: none;
   background: none;
@@ -101,6 +109,12 @@ height: 3rem;
 }
 .gap-1 {
   gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-5 {
+  gap: 5rem;
 }
 /* Width */
 .width-100 {

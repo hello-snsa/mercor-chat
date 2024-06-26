@@ -1,0 +1,39 @@
+.header{
+    display: flex;
+    background-color: #5F3DA7;
+    padding: 2rem;
+    font-size: large;
+    height: 6rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    /* flex flex-align-center flex-justify-space-between flex-justify-space-between flex-jc-sb  */
+    align-items: center;
+    justify-content: space-between;
+    box-shadow:0px 0px 10px 0px #0000001a;
+}
+.header_logo-text{
+    display: flex;
+    gap: 1rem;
+    width: 25%;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    padding: 1.5rem;
+    margin-left: 2rem;
+  }
+  .header_logo-img {
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem;
+    
+  }
+  .header_last-column{
+    display: flex;
+    gap: 1rem;
+    color: white;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+  }
