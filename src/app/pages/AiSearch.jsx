@@ -9,17 +9,11 @@ export default function AiSearch() {
 
   return (
     <div className="aiSearch">
-      {/* chat section */}
       <ErrorBoundary>
-        <div className="chatContainer">
-          <ChatCanvas userQuery={userQuery}/>
-        </div>
+        <ChatCanvas userQuery={userQuery} />
       </ErrorBoundary>
-      {/* Search bar */}
       <ErrorBoundary>
-        <div className="searchBar">
-          <SearchBar setUserQuery={setUserQuery}/>
-        </div>
+        <SearchBar setUserQuery={setUserQuery} />
       </ErrorBoundary>
     </div>
   )
