@@ -5,8 +5,9 @@ import { t } from 'i18next';
 import './aiSearch.css';
 import { SearchIcon } from '../../../assets/images';
 
-export default function SearchBar({ userQuery,setUserQuery, setMessages}) {
-    const tempTags = ["react developer", "3 years Experience", "Full time only", "Part time only", "Budget is 5000", "Education : B.tech"];
+export default function SearchBar({ userQuery, setUserQuery, setMessages }) {
+
+    const tempTags = ["react developer", "3 years Experience", "Full time only", "Part time only", "Budget is 5000", "Education : B.tech"];// TODO: Remove this and generate tags logically.
 
     const [userInput, setUserInput] = useState('');
     const [availableTags, setAvailableTags] = useState([]);
@@ -20,26 +21,24 @@ export default function SearchBar({ userQuery,setUserQuery, setMessages}) {
 
     const handleSearch = () => {
         setUserQuery(userInput);
-        setMessages(prev => {
-            return [...prev, {
-                "senderText": userInput || ""
-            }]
-        })
+        setMessages(prev => ([...prev, {
+            "senderText": userInput || ""
+        }]))
         setUserInput('');
     }
 
     const handleTagClick = (tag) => {
         setUserQuery(tag);
-        setMessages(prev => {
-            return [...prev, {
-                "senderText": tag || ""
-            }]
-        })
+        setMessages(prev => ([...prev, {
+            "senderText": tag || ""
+        }]))
     }
+    
     useEffect(() => {
         // TODO: handle Available tags.
         setAvailableTags(tempTags)
-    }, [])
+    }, []);
+
     return (
         <div className='aiSearch_SearchBar'>
             <div className='aiSearch_tags'>
@@ -69,5 +68,8 @@ export default function SearchBar({ userQuery,setUserQuery, setMessages}) {
 }
 
 SearchBar.propTypes = {
-    setUserQuery: PropTypes.func.isRequired
+    setUserQuery: PropTypes.func,
+    setMessages: PropTypes.func,
+    userQuery: PropTypes.string,
+
 }

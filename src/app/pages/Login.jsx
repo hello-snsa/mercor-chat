@@ -2,13 +2,16 @@ import { t } from "i18next";
 import { useEffect, useState } from "react";
 
 import '../components/login/login.css';
-import AiSearch from "./AiSearch";
 import { REFRESH_TOKEN, TOKEN } from "../../utils/Constants";
 import toast from "../../utils/toast";
 import { ToastContainer } from 'react-toastify';
 import { LoginHero } from "../../assets/images";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isEmailValid, setIsEmailValid] = useState(false);
@@ -29,7 +32,7 @@ export default function Login() {
             localStorage.setItem("email", email);
             localStorage.setItem("MercorUserToken", TOKEN);
             localStorage.setItem("MercorRefreshToken", REFRESH_TOKEN);
-            window.location.href = "/ai-search";
+            navigate("/ai-search");
         } else {
             console.log("Invalid email or password")
             //TODO: add toast.
@@ -56,11 +59,11 @@ export default function Login() {
         }
 
     }, [email, password])
-
-    if (localStorage.getItem("MercorUserToken")) {
-        window.location.href = "/ai-search";
-        return <AiSearch />
-    }
+    useEffect(() => {
+        if (localStorage.getItem("MercorUserToken")) {
+            navigate("/ai-search");
+        }
+    }, [])
 
     return (
         <div className="login">
@@ -71,55 +74,55 @@ export default function Login() {
                 </div>
                 <div className=" flex flex-column gap-5">
                     <div>
-                    <p className="login_header">{t("Welcome to Marcus AI")}</p>
+                        <p className="login_header">{t("Welcome to Marcus AI")}</p>
                     </div>
                     {/* Email/Phone */}
                     <div className="flex flex-column gap-5 flex-jc-sb">
-                    <p className="bold">
-                        {t("Login to your account")}
-                    </p>
+                        <p className="bold">
+                            {t("Login to your account")}
+                        </p>
 
-                    <div className="flex flex-column gap-2">
-                        <div className="flex flex-column gap-1">
-                            <label
-                                htmlFor="email-phone"
-                                className="label"
-                                id="email-phone"
-                            >{t('Email/Phone')}</label>
-                            <input type="text"
-                                className="login_input"
-                                id="email-phone"
-                                placeholder={t('Enter your email or phone no.')}
-                                onChange={handleEmail}
-                            />
+                        <div className="flex flex-column gap-2">
+                            <div className="flex flex-column gap-1">
+                                <label
+                                    htmlFor="email-phone"
+                                    className="label"
+                                    id="email-phone"
+                                >{t('Email/Phone')}</label>
+                                <input type="text"
+                                    className="login_input"
+                                    id="email-phone"
+                                    placeholder={t('Enter your email or phone no.')}
+                                    onChange={handleEmail}
+                                />
+                            </div>
+
+                            <div className="flex flex-column gap-1">
+                                <label
+                                    htmlFor="password"
+                                    className="label"
+                                    id="password"
+                                >{t('Password')}</label>
+                                <input type="password"
+                                    className="login_input"
+                                    id="password"
+                                    placeholder={t('Enter your password')}
+                                    onChange={handlePassword}
+                                />
+                            </div>
+
+                            <div className="flex mt-1r flex-jc-r">
+                                <button
+                                    className="btn-primary login-btn"
+                                    id="login"
+                                    onClick={handleLogin}
+                                    disabled={!(isEmailValid && isPasswordValid)}
+                                >{t('Login')}</button>
+
+
+                            </div>
+
                         </div>
-                        
-                        <div className="flex flex-column gap-1">
-                            <label
-                                htmlFor="password"
-                                className="label"
-                                id="password"
-                            >{t('Password')}</label>
-                            <input type="password"
-                                className="login_input"
-                                id="password"
-                                placeholder={t('Enter your password')}
-                                onChange={handlePassword}
-                            />
-                        </div>
-                        
-                        <div className="flex mt-1r flex-jc-r">
-                            <button
-                                className="btn-primary login-btn"
-                                id="login"
-                                onClick={handleLogin}
-                                disabled={!(isEmailValid && isPasswordValid)}
-                            >{t('Login')}</button>
-
-
-                        </div>
-
-                    </div>
                     </div>
                 </div>
             </div>

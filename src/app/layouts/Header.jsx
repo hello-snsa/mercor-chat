@@ -2,11 +2,11 @@ import { t } from 'i18next'
 
 import './header.css'
 import { Logo } from '../../assets/images'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
 
-    const currentPage = window.location.pathname;
+    const currentPage = useLocation().pathname;
 
     return (
         <header className="header" >

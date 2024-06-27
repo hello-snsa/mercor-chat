@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { t } from "i18next";
 
 import './sidebar.css'
@@ -7,25 +7,24 @@ import { HomeIcon, HomeIconActive, Search, SearchActive, Bookmark, BookmarkActiv
 
 export default function SideBar() {
   const location = useLocation().pathname;
+  const navigate = useNavigate();
 
   const [activeLocation, setActiveLocation] = useState("");
 
   const handleLogout = () => {
     localStorage.removeItem("MercorUserToken");
     localStorage.removeItem("MercorRefreshToken");
-
-    window.location.href = "/login";
+    navigate("/login");
   }
 
   useEffect(() => {
     setActiveLocation(location);
-  }, [location])
+  }, [location]);
 
   return (
-    <div className="flex flex-column flex-justify-space-between height-100 width-100 sidebar" >
-      <div className="sidebar-top flex flex-column mt-2r">
-        <div className="logo-details">
-          <NavLink to="/">
+    <div className="sidebar" >
+      <div className="sidebar_top">
+          <NavLink to="/" className="logo-details">
             <img
               src={activeLocation === "/" ? HomeIconActive : HomeIcon}
               alt={t("tHome")}
@@ -33,29 +32,21 @@ export default function SideBar() {
             />
             <p className="logo_name">{t("tHome")}</p>
           </NavLink>
-        </div>
-        <div className="logo-details">
-          <NavLink to="/ai-search" >
+          <NavLink to="/ai-search" className="logo-details">
             <img src={activeLocation === "/ai-search" ? SearchActive : Search} alt={t("tSearchingGlass")} />
             <p className="logo_name">{t('tSearch')}</p>
           </NavLink>
-        </div>
-        <div className="logo-details">
-          <NavLink to="/shortlisted">
+          <NavLink to="/shortlisted" className="logo-details">
             <img src={activeLocation === "/shortlisted" ? BookmarkActive : Bookmark} alt={t('bookmarkSymbol')} />
             <p className="logo_name">{t('tShortlisted')}</p>
           </NavLink>
-        </div>
         <div>
         </div>
       </div>
-      <div className="sidebar-bottom mb-2r">
-        <div>
+      <div className="sidebar_bottom mb-2r">
           <button onClick={() => handleLogout()} className="btn-hidden-outline">
             <img src={Logout} alt={t('tLogout')} />
           </button>
-
-        </div>
       </div>
     </div>
   )

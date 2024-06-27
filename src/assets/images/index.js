@@ -11,7 +11,7 @@ import HireIcon from './icons/hire.png';
 import LoginHero from './loginHero.png';
 import ChatHero from './chatHero.png';
 import Logo from './logo.png';
-import SearchPage from './searchPage.png';
+import SearchPageSS from './searchPageSS.png';
 import DottedLine from './dottedLine.png';
 import LoginSS from './loginSS.png';
 import SearchBarSS from './searchBarSS.png';
@@ -22,7 +22,7 @@ export {
     HomeIconActive,
     Search,
     SearchActive,
-    SearchPage,
+    SearchPageSS,
     Bookmark,
     BookmarkWhite,
     BookmarkActive,
