@@ -146,6 +146,9 @@
     padding-bottom: 2.5rem;
     padding-top: 6rem;
     min-width: 70vw;
+    max-width: 70vw;
+    /* background-color: red; */
+
 }
 
 /* CandidateCard */
@@ -398,5 +401,6 @@ justify-content: flex-start;
         padding-bottom: 1rem;
         padding-top: 1rem;
         min-width: 70vw;
+        max-width: 100vw;
     }
 }

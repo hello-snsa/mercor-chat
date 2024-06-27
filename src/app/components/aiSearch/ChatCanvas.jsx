@@ -10,7 +10,7 @@ import { ChatHero, UserDp } from '../../../assets/images'
 import { BASE_URL, CHAT_HISTORY } from '../../../utils/apiConstants';
 import toast from '../../../utils/toast';
 
-export default function ChatCanvas({ userQuery, messages, setMessages,isLoading, setIsLoading }) {
+export default function ChatCanvas({ userQuery, messages, setMessages, isLoading, setIsLoading }) {
   const bottomRef = useRef(null);
 
   const [chatData, setChatData] = useState([]);
@@ -36,12 +36,12 @@ export default function ChatCanvas({ userQuery, messages, setMessages,isLoading,
     } catch (error) {
       if (error.response.status === 401) {
         getToken(getChatHistory);
-    setIsLoading(true);
+        setIsLoading(true);
       }
       else {
         toast(t("somethingWentWrong"), "error")
       }
-    }finally{
+    } finally {
       setIsLoading(false);
     }
   }
@@ -61,8 +61,10 @@ export default function ChatCanvas({ userQuery, messages, setMessages,isLoading,
   }, [messages])
 
   useEffect(() => {
-    userQuery && getChatHistory();
-    setIsLoading(true);
+    if (userQuery) {
+      setIsLoading(true);
+      getChatHistory();
+    }
   }, [userQuery])
 
   return (
