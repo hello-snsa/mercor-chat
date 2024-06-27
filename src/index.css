@@ -17,3 +17,8 @@ a{
     text-decoration: none;
     color: inherit;
 }
+hr{
+    border-top: 1px solid #f5f6f5;
+    width: 100%;
+    margin: 1rem 0;
+}

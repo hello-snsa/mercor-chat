@@ -63,9 +63,7 @@ export default function CandidateCard({ candidateData }) {
                     </div>
                 </div>
             </div>
-            <div>
                 {toggleView && <ProfileCard candidateData={candidateData} />}
-            </div>
             <div>
                 <button className='btn-primary btn-extended' onClick={handleToggleView}>{toggleView ? "Hide details ^" : "View Profile"}</button>
             </div>

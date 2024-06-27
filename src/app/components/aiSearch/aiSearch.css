@@ -98,17 +98,8 @@
     background-color: #fff;
 }
 .chatCanvas_message_bot_text{
-    /* display: flex;
-    justify-content: flex-start;
-    margin-top: 1rem; */
     background-color: #CED2D8;
     color:#333;
-    /* width: 40%; */
-    /* min-height: fit-content;
-    min-height: 50px;
-    padding: 1rem;
-    margin-right: 2rem;
-    border-radius: 24px; */
 }
 
 /* Chat Canvas */
@@ -152,10 +143,6 @@
 
 /* CandidateCard */
 .chatCanvas_message_candidate{
-    /* display: flex;
-    justify-content: flex-start;
-    align-items: start;
-    flex-direction: column; */
     margin-top: 1rem;
     background-color: #fff;
     width: 80%;
@@ -218,6 +205,66 @@ flex-wrap: wrap;
     gap: 0 1rem ;
     flex-wrap: wrap;
 }
+/* profile Card */
+.profileCard{
+    margin-top: 2rem;
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
+}
+.profileCard p{
+    font-size: 1.4rem;
+    color: #333;
+}
+.chatCanvas_message_profile_video-container{
+    margin-top: 1rem;
+}
+.chatCanvas_message_profile_video-container video{
+    margin: 1rem auto ;
+    display: flex;
+    width: 75%;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.profile_bottom{
+margin: 1rem 0;
+}
+.profile_work-experience{
+
+}
+.profile_education{
+display: flex;
+align-items: center;
+align-items: flex-start;
+justify-content: flex-start;
+}
+.profile_education_summary{
+    display: flex;
+    gap:1rem;
+    width: 100%;
+}
+.profile_education_timeline{
+
+    min-width: 10rem;
+    min-width: fit-content;
+    height: fit-content;
+    
+}
+.profile_education_description{
+    width: 85%;
+    line-height: 2rem;
+    margin: 1rem 0;
+    color:#333;
+
+}
+.profile_award{
+    line-height: 3rem;
+    padding: 0 1rem ;
+    color: #333;
+
+}
+
+/* Extra */
 .max-w-60{
         width: fit-content;
     max-width: 60rem;
