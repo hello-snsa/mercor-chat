@@ -14,8 +14,10 @@ export default function ChatCanvas({ userQuery, messages, setMessages }) {
   const bottomRef = useRef(null);
 
   const [chatData, setChatData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getChatHistory = async () => {
+    setIsLoading(true);
     try {
       const response = await axios.post(`${BASE_URL}${CHAT_HISTORY}`,
         {
@@ -35,10 +37,13 @@ export default function ChatCanvas({ userQuery, messages, setMessages }) {
     } catch (error) {
       if (error.response.status === 401) {
         getToken(getChatHistory);
+    setIsLoading(true);
       }
       else {
         toast(t("somethingWentWrong"), "error")
       }
+    }finally{
+      setIsLoading(false);
     }
   }
 
@@ -58,6 +63,7 @@ export default function ChatCanvas({ userQuery, messages, setMessages }) {
 
   useEffect(() => {
     userQuery && getChatHistory();
+    setIsLoading(true);
   }, [userQuery])
 
   return (
@@ -86,6 +92,7 @@ export default function ChatCanvas({ userQuery, messages, setMessages }) {
                   </div>
                   <img src={UserDp} alt="candidate profile" />
                 </div> : null}
+                {isLoading && <div className='msg-loader' />}
                 {
                   message.candidates?.map((candidate, index) => {
                     return (

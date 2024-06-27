@@ -9,6 +9,7 @@ import getToken from '../../utils/getToken';
 export default function Shortlisted() {
     const [shortListedCandidates, setShortListedCandidates] = useState([]);
     const [profileList, setProfileList] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     const getShortListedCandidates = async () => {
         try {
@@ -43,20 +44,29 @@ export default function Shortlisted() {
                 response?.data[0] && setProfileList(prev => [...prev, {...response?.data[0],"status": "shortlisted",}]);
             } catch (error) {
                 console.log(error)
+            }finally{
+                setIsLoading(false);
             }
         })
     }
 
     useEffect(() => {
-        shortListedCandidates?.length===0 && getShortListedCandidates();
+        if(shortListedCandidates?.length===0){ 
+            setIsLoading(true);
+            getShortListedCandidates();
+        }
     }, []);
 
     useEffect(() => {
-        shortListedCandidates?.length>0 && getProfile();
+        if(shortListedCandidates?.length>0) {
+            setIsLoading(true);
+            getProfile();
+        }
     }, [shortListedCandidates]);
 
     return (
         <div className="aiSearch">
+        {isLoading && <div className='loader' />}
 
             <div className="chatContainer">
 
