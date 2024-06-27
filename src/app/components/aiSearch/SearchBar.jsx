@@ -32,6 +32,7 @@ export default function SearchBar({ userQuery, setUserQuery, setMessages }) {
         setMessages(prev => ([...prev, {
             "senderText": tag || ""
         }]))
+        setUserInput('');
     }
     
     useEffect(() => {
@@ -40,7 +41,7 @@ export default function SearchBar({ userQuery, setUserQuery, setMessages }) {
     }, []);
 
     return (
-        <div className='aiSearch_SearchBar'>
+        <div className='aiSearch_searchbar'>
             <div className='aiSearch_tags'>
                 {
                     availableTags.map((tag, index) => (

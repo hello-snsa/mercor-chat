@@ -2,7 +2,7 @@
     background-color: #F5F5F5;
 }
 /* SearchBar */
-.aiSearch_SearchBar {
+.aiSearch_searchbar {
     display: flex; 
     justify-content: space-between;
     justify-content: center;
@@ -216,6 +216,10 @@ flex-wrap: wrap;
     font-size: 1.4rem;
     color: #333;
 }
+.profileCard_availability{
+    display: flex;
+    justify-content: space-between;
+}
 .chatCanvas_message_profile_video-container{
     margin-top: 1rem;
 }
@@ -232,11 +236,15 @@ margin: 1rem 0;
 .profile_work-experience{
 
 }
-.profile_education{
+.profile_workExp{
 display: flex;
 align-items: center;
 align-items: flex-start;
 justify-content: flex-start;
+}
+.profile_header{
+    display: flex;
+    justify-content: space-between;
 }
 .profile_education_summary{
     display: flex;
@@ -282,10 +290,10 @@ justify-content: flex-start;
 }
 /* Media query */
 @media screen and (max-width: 768px) {
-    .aiSearch_SearchBar {
+    .aiSearch_searchbar {
         padding: 0 2rem;
-        position: relative;
-        bottom: 10rem;
+        position: fixed;
+        bottom: 0;
     }
     .aiSearch_searchField {
         padding: 0 1rem;
@@ -305,14 +313,71 @@ justify-content: flex-start;
         padding: 1rem;
     }
     .chatCanvas {
-        min-height: 80vh;
-        padding: 0 2rem;
-        margin-bottom: 1rem;
-        position: relative;
-        top: 0;
-        left: 0;
+        margin-bottom: 18rem;
+        margin-top: 13rem;
+        min-width: 100vw;
     }
     .chatCanvas_hero{
         display: none;
+    }
+    .msg-loader{
+        bottom:19rem;
+        left:10rem;
+    }
+    .chatCanvas_message_bot_text{
+        width: 70%;
+        padding-left: 0;
+    }
+    .chatCanvas_message_bot{
+        gap: 0.5rem;
+
+    }
+    .chatCanvas_message_sender{
+        gap: 0.5rem;
+    }
+    .chatCanvas_message_sender_text{
+        min-width: fit-content;
+    }
+    .chatCanvas_message_candidate_topLeft{
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .chatCanvas_message_candidate_topRight{
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 0.5rem;
+        /* background-color: red; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* color:red */
+    }
+    .btn-hire{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.7rem;
+        height: 0rem;
+
+    }
+    .chatCanvas_message_candidate_topRight img{
+        display: none;
+    }
+    .chatCanvas_message_candidate_info{
+        flex-wrap: wrap;
+        /* gap: 0.5rem; */
+    }
+    .profileCard_availability{
+        flex-direction: column;
+    }
+    .chatCanvas_message_profile_video-container video{
+        width: 100%;
+    }
+    .profile_header{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .profile_education_description{
+        width: 100%;
     }
 }

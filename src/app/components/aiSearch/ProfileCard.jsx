@@ -35,7 +35,7 @@ export default function ProfileCard({ candidateData }) {
 
     return (
         <div className='profileCard' >
-            <div className='flex gap-1 flex-space-between' >
+            <div className='profileCard_availability' >
                 <>
                     {fullTime ? <div className='lh-3'>
                         <span><b>Full Time : </b></span>
@@ -65,11 +65,11 @@ export default function ProfileCard({ candidateData }) {
                 {
                     workExperience?.map((work, index) => (
                         <>
-                            {work?.company ? <div key={index} className='profile_education'>
+                            {work?.company ? <div key={index} className='profile_workExp'>
                                 <div className='profile_education_summary mt-1r'>
                                     <img src={work?.companyLogo} alt='company Logo' className='round-icon ' />
                                     <div >
-                                        <div className='flex flex-jc-sb' >
+                                        <div className='profile_header' >
                                             <div>
                                                 <p><b>{work?.role}</b></p>
                                                 <p><i>{work?.company}{work?.company && work?.locationCity ? ", " : null}{work?.locationCity}{

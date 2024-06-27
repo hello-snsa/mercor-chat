@@ -18,7 +18,7 @@ function App() {
   return (
     <div className='app-container'>
       <Header />
-      <div className='flex '>
+      <div className='content-separator'>
         <ErrorBoundary>
           {currentLocation != "/login" ? 
             <SideBar />: null}
