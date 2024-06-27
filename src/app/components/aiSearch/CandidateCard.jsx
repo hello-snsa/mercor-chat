@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types'
+import { t } from 'i18next';
 
 import ProfileCard from './ProfileCard';
 import { BookmarkActive, BookmarkWhite, HireIcon } from '../../../assets/images';
-import { t } from 'i18next';
 
 export default function CandidateCard({ candidateData }) {
 
@@ -63,11 +63,9 @@ export default function CandidateCard({ candidateData }) {
                     </div>
                 </div>
             </div>
-            {/* Bottom card */}
             <div>
                 {toggleView && <ProfileCard candidateData={candidateData} />}
             </div>
-            {/* Card Toggler */}
             <div>
                 <button className='btn-primary btn-extended' onClick={handleToggleView}>{toggleView ? "Hide details ^" : "View Profile"}</button>
             </div>
@@ -77,15 +75,17 @@ export default function CandidateCard({ candidateData }) {
 
 CandidateCard.propTypes = {
     candidateData: PropTypes.shape({
-        finalImageUrl: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        skills: PropTypes.arrayOf(PropTypes.string).isRequired,
-        country: PropTypes.string.isRequired,
-        yearsOfWorkExperience: PropTypes.number.isRequired,
-        summary: PropTypes.string.isRequired,
-        fullTime: PropTypes.bool.isRequired,
-        partTime: PropTypes.bool.isRequired,
-        status: PropTypes.string.isRequired
+        finalImageUrl: PropTypes.string,
+        name: PropTypes.string,
+        skills: PropTypes.arrayOf(PropTypes.string),
+        country: PropTypes.string,
+        yearsOfWorkExperience: PropTypes.number,
+        summary: PropTypes.string,
+        fullTime: PropTypes.bool,
+        partTime: PropTypes.bool,
+        status: PropTypes.string,
+        fullTimePrice: PropTypes.number,
+        partTimePrice: PropTypes.number
     })
 }
 
