@@ -15,6 +15,7 @@ import SearchPage from './searchPage.png';
 import DottedLine from './dottedLine.png';
 import LoginSS from './loginSS.png';
 import SearchBarSS from './searchBarSS.png';
+import UserDp from './userDp.gif';
 
 export {
     HomeIcon,
@@ -33,6 +34,8 @@ export {
     HireIcon,
     Logo,
     LoginSS,
-    SearchBarSS
+    SearchBarSS,
+    UserDp
+
 
 }

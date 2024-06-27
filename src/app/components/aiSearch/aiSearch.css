@@ -62,7 +62,6 @@
     outline: none;
     border-radius: 24px;
 }
-
 .chatCanvas_message_sender , .chatCanvas_message_bot{
     display: flex;
     justify-content: flex-start;
@@ -86,23 +85,17 @@
     min-height: 50px;
     padding: 1rem;
     border-radius: 24px;
-    position: relative;
-    top:0;
-    right: 0;
-
 }
 .chatCanvas_message_sender_text p,.chatCanvas_message_bot_text p{
     margin-left: 2rem;
     font-size: 1.4rem;
     line-height: 2rem;
-    
 }
 .chatCanvas_message_sender img,.chatCanvas_message_bot img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #fff;
-
 }
 .chatCanvas_message_bot_text{
     /* display: flex;
@@ -154,9 +147,7 @@
     line-height: 3rem;
 }
 .chatCanvas_chatContainer{
-    padding: 2rem 8rem;
-    /* padding-right: 2rem; */
-    /* background-color: red; */
+    padding-bottom: 2rem;
 }
 
 /* CandidateCard */

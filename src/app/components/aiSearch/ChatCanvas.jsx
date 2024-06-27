@@ -6,7 +6,7 @@ import { t } from 'i18next';
 
 import CandidateCard from './CandidateCard';
 import getToken from '../../../utils/getToken';
-import { ChatHero } from '../../../assets/images'
+import { ChatHero, UserDp } from '../../../assets/images'
 import { BASE_URL, CHAT_HISTORY } from '../../../utils/apiConstants';
 import toast from '../../../utils/toast';
 
@@ -68,17 +68,14 @@ export default function ChatCanvas({ userQuery, messages, setMessages }) {
           <img src={ChatHero} alt={t('chatHeroAlt')}
             className='chatCanvas_hero' />
           <div className={'chatHeader'}>
-            <h2>Welcome to Marcus</h2>
-            <p>Hello, I'm Marcus, your AI hiring assistant.
-              Describe your ideal hiring, and I will go through
-              hundreds of thousands of people to discover the best fit.
-            </p>
-            <p> So tell me, How can I help?</p>
+            <h2>{t('chatIntoHeader')}</h2>
+            <p>{t('chatIntro')}</p>
+            <p>{t('chatIntro2')}</p>
           </div>
         </>
         : null
       }
-      <div className='chatCanvas_chatContainer' id="chatCanvas_chatContainer">
+      <div className='chatCanvas_chatContainer'>
         {
           messages?.map((message, index) => {
             return (
@@ -87,7 +84,7 @@ export default function ChatCanvas({ userQuery, messages, setMessages }) {
                   <div className='chatCanvas_message_sender_text'>
                     <p>{message?.senderText}</p>
                   </div>
-                  <img src="https://lh3.googleusercontent.com/a/ACg8ocLXUWQv3D9F013mzRh5cpiLR3Alib4jCwzj1Tg_VbowdNtExnyq=s96-c" alt="candidate profile" />
+                  <img src={UserDp} alt="candidate profile" />
                 </div> : null}
                 {
                   message.candidates?.map((candidate, index) => {
