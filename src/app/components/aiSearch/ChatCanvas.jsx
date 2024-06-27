@@ -10,7 +10,7 @@ import { ChatHero } from '../../../assets/images'
 import { BASE_URL, CHAT_HISTORY } from '../../../utils/apiConstants';
 import toast from '../../../utils/toast';
 
-export default function ChatCanvas({ userQuery, messages, setMessages}) {
+export default function ChatCanvas({ userQuery, messages, setMessages }) {
   const bottomRef = useRef(null);
 
   const [chatData, setChatData] = useState([]);
@@ -49,16 +49,15 @@ export default function ChatCanvas({ userQuery, messages, setMessages}) {
         "candidates": chatData?.candidates || [],
         "bot_message": chatData?.bot_message || "",
       }]
-
     })
   }, [chatData])
 
   useEffect(() => {
-    userQuery !== "" && bottomRef?.current?.scrollIntoView({ behavior: 'smooth' });
+    userQuery && bottomRef?.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages])
 
   useEffect(() => {
-    userQuery !== "" && getChatHistory();
+    userQuery && getChatHistory();
   }, [userQuery])
 
   return (
@@ -68,6 +67,14 @@ export default function ChatCanvas({ userQuery, messages, setMessages}) {
         <>
           <img src={ChatHero} alt={t('chatHeroAlt')}
             className='chatCanvas_hero' />
+          <div className={'chatHeader'}>
+            <h2>Welcome to Marcus</h2>
+            <p>Hello, I'm Marcus, your AI hiring assistant.
+              Describe your ideal hiring, and I will go through
+              hundreds of thousands of people to discover the best fit.
+            </p>
+            <p> So tell me, How can I help?</p>
+          </div>
         </>
         : null
       }
@@ -76,12 +83,12 @@ export default function ChatCanvas({ userQuery, messages, setMessages}) {
           messages?.map((message, index) => {
             return (
               <div key={index} className='chatCanvas_message'>
-                {message?.senderText?<div className='chatCanvas_message_sender'>
+                {message?.senderText ? <div className='chatCanvas_message_sender'>
                   <div className='chatCanvas_message_sender_text'>
                     <p>{message?.senderText}</p>
                   </div>
                   <img src="https://lh3.googleusercontent.com/a/ACg8ocLXUWQv3D9F013mzRh5cpiLR3Alib4jCwzj1Tg_VbowdNtExnyq=s96-c" alt="candidate profile" />
-                </div>:null}
+                </div> : null}
                 {
                   message.candidates?.map((candidate, index) => {
                     return (
@@ -89,11 +96,11 @@ export default function ChatCanvas({ userQuery, messages, setMessages}) {
                     )
                   })
                 }
-                {message?.bot_message?<div className='chatCanvas_message_bot'>
+                {message?.bot_message ? <div className='chatCanvas_message_bot'>
                   <img src="https://team.mercor.com/icon.svg" alt="Mercor" />
                   <div className='chatCanvas_message_bot_text'>
                     <p>{message?.bot_message}</p></div>
-                </div>:null}
+                </div> : null}
               </div>
             )
           })
@@ -106,5 +113,7 @@ export default function ChatCanvas({ userQuery, messages, setMessages}) {
 }
 
 ChatCanvas.propTypes = {
-  userQuery: PropTypes.string
+  userQuery: PropTypes.string,
+  messages: PropTypes.array,
+  setMessages: PropTypes.func
 }

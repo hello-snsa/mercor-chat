@@ -120,10 +120,6 @@
 
 /* Chat Canvas */
 .chatCanvas{
-    min-height: 80vh;
-    width: 100%;
-    /* padding: 0 6rem; */
-    position: relative;
     margin-bottom: 10rem;
 }
 .chatCanvas_hero{
@@ -136,6 +132,26 @@
     top: 0;
     left: 0;
 
+}
+.chatHeader{
+    padding: 1rem 2rem;
+    color: White;
+    width: 100%;
+    margin-top: 26rem;
+    margin-left: -48rem;
+    z-index: 99;
+    position: relative;
+    left:-100px;
+}
+.chatHeader h2{
+    width: 40rem;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.chatHeader p{
+    width: 40rem;
+    line-height: 3rem;
 }
 .chatCanvas_chatContainer{
     padding: 2rem 8rem;
@@ -236,6 +252,7 @@
         padding: 1rem;
     }
     .chatCanvas {
+        min-height: 80vh;
         padding: 0 2rem;
         margin-bottom: 1rem;
         position: relative;

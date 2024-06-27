@@ -35,7 +35,6 @@ export default function SearchBar({ userQuery,setUserQuery, setMessages}) {
                 "senderText": tag || ""
             }]
         })
-        // TODO: Add tag to search query
     }
     useEffect(() => {
         // TODO: handle Available tags.
