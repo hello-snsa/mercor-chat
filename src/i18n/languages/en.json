@@ -7,6 +7,7 @@
   "tBookMark": "BookMark",
   "tSearchingGlass": "searching glass",
   "bookmarkSymbol": "Symbol showing bookmark",
+  "tShortlist": "Shortlist",
   "tShortlisted": "Shortlisted",
   "tLogin": "Login",
   "homepageHeadingText": "Unlock the Power of AI for Recruiting Best Talent",
@@ -24,5 +25,8 @@
   "chatIntoHeader": "Welcome to Marcus",
   "chatIntro":"Hello, I'm Marcus, your AI hiring assistant. Describe your ideal hiring, and I will go through hundreds of thousands of people to discover the best fit.",
   "chatIntro2": "So tell me, How can I help?",
+  "expertIn":"Expert In : ",
+
+
     "": ""
 }

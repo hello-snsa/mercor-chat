@@ -152,19 +152,19 @@
 
 /* CandidateCard */
 .chatCanvas_message_candidate{
-    display: flex;
+    /* display: flex;
     justify-content: flex-start;
     align-items: start;
-    flex-direction: column;
+    flex-direction: column; */
     margin-top: 1rem;
     background-color: #fff;
     width: 80%;
-    min-height:30rem;
+    min-height:20rem;
+    height: fit-content;
     margin: 2rem;
     padding: 2rem;
     border-radius: 2.4rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin :2rem;
 }
 .candidateCard{
     display: flex;
@@ -180,14 +180,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100rem;
-    /* margin-bottom: 1rem; */
-    /* gap:2rem;
-    color: #000;
-    font-weight: 500;
-    font-weight:bold;
-    font-size: 1.6rem;
-    background-color: red; */
+    flex-wrap: wrap;
 }
 .chatCanvas_message_candidate_topLeft{
     display: flex;
@@ -196,17 +189,39 @@
     margin-bottom: 1rem;
     gap:2rem;
     color: #000;
-    font-weight: 500;
     font-weight:bold;
     font-size: 1.6rem;
-    
 }
 .chatCanvas_message_candidate_image img{
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
     border-radius: 1rem;
     background-color: #fff;
     object-fit:cover;
+}
+.chatCanvas_message_candidate_topRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.chatCanvas_message_candidate_middle{
+line-height: 3rem;
+font-size: 1.4rem;
+color:#333;
+flex-wrap: wrap;
+}
+.chatCanvas_message_candidate_info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 1rem ;
+    flex-wrap: wrap;
+}
+.max-w-60{
+        width: fit-content;
+    max-width: 60rem;
+    
 }
 .hireIcon{
     width: 40px;

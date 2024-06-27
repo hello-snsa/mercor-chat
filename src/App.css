@@ -25,21 +25,37 @@
   cursor: pointer;
 }
 .btn-extended{
-  width: 100rem;
+  width: 100%;
   position: relative;
   bottom: 0;
   left: 0;
-  margin-top: 10rem;
+  margin-top: 2rem;
   border-radius: 0.5rem;
+}
+.btn-active{
+  color: #4A00E0 ;
+  background-color:#CED2D8;
+}
+.btn-inactive{
+  color:#fff;
+  background-color: #6E49BD;
 }
 .btn-shadow{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.btn-hire{
+  height: 2rem;
 }
 .round-icon{
   border-radius: 50%;
 width: 3rem;
 height: 3rem;
-
+}
+.bg-dark{
+  background-color: #CED2D8;
+  padding:0 01.25rem;
+  color:#6E49BD;
+border-radius: 2px;
 }
 .routes{
   margin-top: 6rem;
