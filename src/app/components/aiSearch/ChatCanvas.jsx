@@ -10,11 +10,10 @@ import { ChatHero, UserDp } from '../../../assets/images'
 import { BASE_URL, CHAT_HISTORY } from '../../../utils/apiConstants';
 import toast from '../../../utils/toast';
 
-export default function ChatCanvas({ userQuery, messages, setMessages }) {
+export default function ChatCanvas({ userQuery, messages, setMessages,isLoading, setIsLoading }) {
   const bottomRef = useRef(null);
 
   const [chatData, setChatData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   const getChatHistory = async () => {
     setIsLoading(true);

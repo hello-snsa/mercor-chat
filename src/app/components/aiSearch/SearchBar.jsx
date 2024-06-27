@@ -5,7 +5,7 @@ import { t } from 'i18next';
 import './aiSearch.css';
 import { SearchIcon } from '../../../assets/images';
 
-export default function SearchBar({ userQuery, setUserQuery, setMessages }) {
+export default function SearchBar({ userQuery, setUserQuery, setMessages,isLoading }) {
 
     const tempTags = ["react developer", "3 years Experience", "Full time only", "Part time only", "Budget is 5000", "Education : B.tech"];// TODO: Remove this and generate tags logically.
 
@@ -28,6 +28,7 @@ export default function SearchBar({ userQuery, setUserQuery, setMessages }) {
     }
 
     const handleTagClick = (tag) => {
+        if(isLoading) return;
         setUserQuery(tag);
         setMessages(prev => ([...prev, {
             "senderText": tag || ""
@@ -59,7 +60,7 @@ export default function SearchBar({ userQuery, setUserQuery, setMessages }) {
                     value={userInput}
                 />
                 <button onClick={handleSearch} className='btn-hidden-outline'
-                    disabled={userInput === ""}
+                    disabled={!userInput || isLoading}
                 >
                     <img src={SearchIcon} alt={t('searchIconAlt')} />
                 </button>
