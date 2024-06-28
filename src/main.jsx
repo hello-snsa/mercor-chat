@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom';
@@ -9,7 +8,6 @@ import i18n from './i18n/i18n.js';
 import ErrorBoundary from './utils/ErrorBoundary.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <I18nContext.Provider value={i18n}>
       <BrowserRouter >
       <ErrorBoundary>
@@ -17,5 +15,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </ErrorBoundary>
       </BrowserRouter>
     </I18nContext.Provider>
-  </React.StrictMode>,
 )

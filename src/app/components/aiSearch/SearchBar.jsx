@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { t } from 'i18next';
 
 import './aiSearch.css';
-import { SearchIcon } from '../../../assets/images';
+import { SearchIcon, SearchIconDisabled } from '../../../assets/images';
 
-export default function SearchBar({ userQuery, setUserQuery, setMessages,isLoading }) {
+export default function SearchBar({ setUserQuery, setMessages,isLoading }) {
 
-    const tempTags = ["react developer", "3 years Experience", "Full time only", "Part time only", "Budget is 5000", "Education : B.tech"];// TODO: Remove this and generate tags logically.
+    const tempTags = ["react developer", "3 years Experience", "Full time only", "Part time only", "Budget is 5000"];// TODO: Remove this and generate tags logically.
 
     const [userInput, setUserInput] = useState('');
     const [availableTags, setAvailableTags] = useState([]);
@@ -62,7 +62,8 @@ export default function SearchBar({ userQuery, setUserQuery, setMessages,isLoadi
                 <button onClick={handleSearch} className='btn-hidden-outline'
                     disabled={!userInput || isLoading}
                 >
-                    <img src={SearchIcon} alt={t('searchIconAlt')} />
+                   {isLoading ||!userInput ? <img src={SearchIconDisabled} alt={t('searchIconAlt')} />:
+                    <img src={SearchIcon} alt={t('searchIconAlt')} />}
                 </button>
             </div>
         </div>
@@ -73,5 +74,6 @@ SearchBar.propTypes = {
     setUserQuery: PropTypes.func,
     setMessages: PropTypes.func,
     userQuery: PropTypes.string,
+    isLoading: PropTypes.bool
 
 }

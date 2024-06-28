@@ -6,6 +6,7 @@ import Bookmark from './icons/bookmark.svg';
 import BookmarkWhite from './icons/bookmarkWhite.svg';
 import BookmarkActive from './icons/bookmarkActive.svg';
 import SearchIcon from './icons/searchIcon.svg';
+import SearchIconDisabled from './icons/searchIconDisabled.svg';
 import Logout from './icons/logout.svg';
 import HireIcon from './icons/hire.png';
 import LoginHero from './loginHero.png';
@@ -21,6 +22,7 @@ export {
     HomeIcon,
     HomeIconActive,
     Search,
+    SearchIconDisabled,
     SearchActive,
     SearchPageSS,
     Bookmark,

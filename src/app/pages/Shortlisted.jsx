@@ -20,7 +20,6 @@ export default function Shortlisted() {
                 }
             })
             setShortListedCandidates(response?.data?.shortlist?.['my-shortlist'] ?? []);
-            console.log("shortListedCandidates", response?.data?.shortlist?.['my-shortlist']);
         } catch (error) {
             if (error.response?.status === 403) {
                 getToken(getShortListedCandidates);
@@ -34,31 +33,29 @@ export default function Shortlisted() {
 
     const getProfile = async () => {
         shortListedCandidates?.length > 0 && shortListedCandidates.map(async (candidate) => {
-            console.log("shortListedCandidates====>",shortListedCandidates);
             try {
                 const response = await axios.post(CANDIDATE_PROFILE, {
                     "resumeId": candidate?.resumeId,
                     "isWhiteListed": 0
                 })
-                console.log("getProfile", response?.data[0]);
-                response?.data[0] && setProfileList(prev => [...prev, {...response?.data[0],"status": "shortlisted",}]);
+                response?.data[0] && setProfileList(prev => [...prev, { ...response?.data[0], "status": "shortlisted", }]);
             } catch (error) {
                 console.log(error)
-            }finally{
+            } finally {
                 setIsLoading(false);
             }
         })
     }
 
     useEffect(() => {
-        if(shortListedCandidates?.length===0){ 
+        if (shortListedCandidates?.length === 0) {
             setIsLoading(true);
             getShortListedCandidates();
         }
     }, []);
 
     useEffect(() => {
-        if(shortListedCandidates?.length>0) {
+        if (shortListedCandidates?.length > 0) {
             setIsLoading(true);
             getProfile();
         }
@@ -66,7 +63,7 @@ export default function Shortlisted() {
 
     return (
         <div className="aiSearch">
-        {isLoading && <div className='loader' />}
+            {isLoading && <div className='loader' />}
 
             <div className="chatContainer">
 

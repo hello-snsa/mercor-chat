@@ -126,11 +126,9 @@
     padding: 1rem 2rem;
     color: White;
     width: 100%;
-    margin-top: 26rem;
-    margin-left: -48rem;
-    z-index: 99;
+    margin-top: 40rem;
     position: relative;
-    left:-100px;
+    left:-120px;
 }
 .chatHeader h2{
     width: 40rem;

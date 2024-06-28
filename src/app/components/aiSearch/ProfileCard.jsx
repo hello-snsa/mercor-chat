@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 import { USER_VIDEO } from '../../../utils/apiConstants';
+import { t } from 'i18next';
 
 export default function ProfileCard({ candidateData }) {
 
-    const { fullTime, partTime, fullTimePrice, fullTimeAvailability, partTimeAvailability, partTimePrice, videoRecording, projects, awards, education, workExperience } = candidateData;
+    const { fullTime, partTime, fullTimeAvailability, partTimeAvailability, videoRecording, projects, awards, education, workExperience } = candidateData;
 
     const [recordingUrl, setRecordingUrl] = React.useState('')
 
@@ -38,36 +39,34 @@ export default function ProfileCard({ candidateData }) {
             <div className='profileCard_availability' >
                 <>
                     {fullTime ? <div className='lh-3'>
-                        <span><b>Full Time : </b></span>
-                        <span>Can start 40+ hours / week {fullTimeAvailability <= 0 ? "immediately" : " in " + fullTimeAvailability + " weeks"}</span>
+                        <span><b>{t('fullTime')}</b></span>
+                        <span>{t('fullTimeAvailable')}{fullTimeAvailability <= 0 ? "immediately" : " in " + fullTimeAvailability + t("tWeeks")}</span>
                     </div> : null}
                 </>
                 <>
                     {partTime ? <div className='lh-3'>
-                        <span><b>Part Time : </b></span>
-                        <span>Can start 20+ hours / week {partTimeAvailability <= 0 ? "immediately" : " in " + partTimeAvailability + " weeks"}</span>
+                        <span><b>{t('partTime')}</b></span>
+                        <span>{t('partTimeAvailable')}{partTimeAvailability <= 0 ? "immediately" : " in " + partTimeAvailability + t("tWeeks")}</span>
                     </div> : null}
                 </>
-
             </div>
             <div className='chatCanvas_message_profile_video-container'>
                 <hr />
-                <h2>AI Interview</h2>
+                <h2>{t('tAiInterview')}</h2>
                 {recordingUrl !== "" ? <video controls >
                     <source src={recordingUrl} type="video/mp4" />
                 </video> : null}
 
             </div>
-            {/* Work experience */}
             {workExperience?.length > 0 ? <div className='profile_bottom profile_work-experience'>
                 <hr />
-                <h2>Work Experience</h2>
+                <h2>{t('tWorkExperience')}</h2>
                 {
                     workExperience?.map((work, index) => (
                         <>
                             {work?.company ? <div key={index} className='profile_workExp'>
                                 <div className='profile_education_summary mt-1r'>
-                                    <img src={work?.companyLogo} alt='company Logo' className='round-icon ' />
+                                    <img src={work?.companyLogo} alt={t('companyLogo')} className='round-icon ' />
                                     <div >
                                         <div className='profile_header' >
                                             <div>
@@ -82,7 +81,6 @@ export default function ProfileCard({ candidateData }) {
                                             </div>
                                         </div>
                                         <div className='profile_education_description'>
-
                                             <p>{work?.description}</p>
                                         </div>
                                     </div>
@@ -91,18 +89,16 @@ export default function ProfileCard({ candidateData }) {
                         </>))
                 }
             </div> : null}
-            {/* Education */}
             {education?.length > 0 && education[0]?.degree ? <div>
                 <hr />
-                <h2>Education</h2>
+                <h2>{t('tEducation')}</h2>
                 {
                     education?.map((edu, index) => (
                         <>
                             {edu?.degree ? <div key={index} className='flex mt-1r  flex-jc-sb'>
                                 <div className='flex gap-1'>
                                     <img src={edu?.schoolLogo} alt='education icon' className='round-icon' />
-                                    <div
-                                    >
+                                    <div>
                                         <p><b>{edu?.degree}{edu?.degree && edu?.major ? ", " : null}{edu?.major}</b></p>
                                         <p><i>{edu?.school}</i></p>
                                     </div>
@@ -116,18 +112,16 @@ export default function ProfileCard({ candidateData }) {
                         </>))
                 }
             </div> : null}
-            {/* Awards */}
             {awards?.length > 0 ? <div>
                 <hr />
-                <h2>Awards</h2>
+                <h2>{t('tAwards')}</h2>
                 {awards?.map((award, index) => (
                     <li key={index} className='profile_award'>{award?.description}</li>
                 ))}
             </div> : null}
-            {/* Projects */}
             {projects?.length > 0 && projects[0]?.title ? <div >
                 <hr />
-                <h2 >Projects</h2>
+                <h2 >{t('tProjects')}</h2>
                 {projects?.map((project, index) => (
                     <li key={index} className='profile_award'>{project?.title} - {project?.description}</li>
                 ))}
@@ -139,6 +133,4 @@ export default function ProfileCard({ candidateData }) {
 
 ProfileCard.propTypes = {
     candidateData: PropTypes.object,
-
-
 }

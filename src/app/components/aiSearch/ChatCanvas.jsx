@@ -74,11 +74,6 @@ export default function ChatCanvas({ userQuery, messages, setMessages, isLoading
         <>
           <img src={ChatHero} alt={t('chatHeroAlt')}
             className='chatCanvas_hero' />
-          <div className={'chatHeader'}>
-            <h2>{t('chatIntoHeader')}</h2>
-            <p>{t('chatIntro')}</p>
-            <p>{t('chatIntro2')}</p>
-          </div>
         </>
         : null
       }
@@ -91,7 +86,7 @@ export default function ChatCanvas({ userQuery, messages, setMessages, isLoading
                   <div className='chatCanvas_message_sender_text'>
                     <p>{message?.senderText}</p>
                   </div>
-                  <img src={UserDp} alt="candidate profile" />
+                  <img src={UserDp} alt={t("tCandidateProfile")} />
                 </div> : null}
                 {isLoading && <div className='msg-loader' />}
                 {
@@ -120,5 +115,8 @@ export default function ChatCanvas({ userQuery, messages, setMessages, isLoading
 ChatCanvas.propTypes = {
   userQuery: PropTypes.string,
   messages: PropTypes.array,
-  setMessages: PropTypes.func
+  setMessages: PropTypes.func,
+  isLoading: PropTypes.bool,
+  setIsLoading: PropTypes.func
+  
 }

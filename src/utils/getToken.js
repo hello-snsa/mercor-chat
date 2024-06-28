@@ -9,7 +9,6 @@ const getToken = async (callback=()=>{}) => {
           "refresh_token": localStorage.getItem('MercorRefreshToken'),
         }
       )
-      console.log("response of token===>", response);
       localStorage.setItem('MercorUserToken', response?.data?.access_token);
       localStorage.setItem('MercorRefreshToken', response?.data?.refresh_token);
       callback();

@@ -34,8 +34,6 @@ export default function Login() {
             localStorage.setItem("MercorRefreshToken", REFRESH_TOKEN);
             navigate("/ai-search");
         } else {
-            console.log("Invalid email or password")
-            //TODO: add toast.
             toast('Invalid email or password', 'error');
         }
     }
