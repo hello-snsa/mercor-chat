@@ -67,7 +67,7 @@ export default function Login() {
         <div className="login">
             <ToastContainer />
             <div className="login_card">
-                <div >
+                <div className="login_card_hero" >
                     <img src={LoginHero} alt="Marcus AI" className="login_card-img" />
                 </div>
                 <div className=" flex flex-column gap-5">
@@ -115,7 +115,7 @@ export default function Login() {
                                     id="login"
                                     onClick={handleLogin}
                                     disabled={!(isEmailValid && isPasswordValid)}
-                                >{t('Login')}</button>
+                                >{t('tLogin')}</button>
 
 
                             </div>

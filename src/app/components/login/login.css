@@ -42,3 +42,11 @@
     border-radius: 5px;
     margin-bottom: 1rem;
 }
+@media screen and (max-width: 768px){
+    .login_card{
+        margin: 2rem;
+    }
+    .login_card_hero{
+        display: none;
+    }
+}
