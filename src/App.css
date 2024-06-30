@@ -13,6 +13,8 @@
   background-color: #4B22A2;
   border: none;
   color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .btn-hidden-outline {
   border: none;
