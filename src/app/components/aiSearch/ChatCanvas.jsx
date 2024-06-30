@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import { ToastContainer } from 'react-toastify';
 import { t } from 'i18next';
 
 import CandidateCard from './CandidateCard';
-import getToken from '../../../utils/getToken';
 import { ChatHero, UserDp } from '../../../assets/images'
 import { BASE_URL, CHAT_HISTORY } from '../../../utils/apiConstants';
 import toast from '../../../utils/toast';
+import api from '../../../utils/axios';
 
 export default function ChatCanvas({ userQuery, messages, setMessages, isLoading, setIsLoading }) {
   const bottomRef = useRef(null);
@@ -18,29 +17,17 @@ export default function ChatCanvas({ userQuery, messages, setMessages, isLoading
   const getChatHistory = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.post(`${BASE_URL}${CHAT_HISTORY}`,
+      const response = await api.post(`${BASE_URL}${CHAT_HISTORY}`,
         {
           "input": userQuery,
           "chat_history": chatData?.chat_history || [],
           "shortlist": [],
           "email": "hello.shahanshah@gmail.com",
           "isWhiteListed": 0
-        },
-        {
-          "headers": {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem('MercorUserToken')}`
-          },
         })
       setChatData(response?.data)
     } catch (error) {
-      if (error.response.status === 401) {
-        getToken(getChatHistory);
-        setIsLoading(true);
-      }
-      else {
         toast(t("somethingWentWrong"), "error")
-      }
     } finally {
       setIsLoading(false);
     }

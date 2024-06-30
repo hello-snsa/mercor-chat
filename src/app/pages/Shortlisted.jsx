@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios';
 
 import "../components/aiSearch/aiSearch.css";
 import CandidateCard from '../components/aiSearch/CandidateCard';
 import { CANDIDATE_PROFILE, SHORTLISTED_CANDIDATES } from '../../utils/apiConstants';
-import getToken from '../../utils/getToken';
+import api from '../../utils/axios';
 
 export default function Shortlisted() {
     const [shortListedCandidates, setShortListedCandidates] = useState([]);
@@ -13,20 +12,10 @@ export default function Shortlisted() {
 
     const getShortListedCandidates = async () => {
         try {
-            const response = await axios.get(SHORTLISTED_CANDIDATES, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem('MercorUserToken')}`
-                }
-            })
+            const response = await api.get(SHORTLISTED_CANDIDATES)
             setShortListedCandidates(response?.data?.shortlist?.['my-shortlist'] ?? []);
         } catch (error) {
-            if (error.response?.status === 403) {
-                getToken(getShortListedCandidates);
-            } else {
-                console.log(error)
-            }
-
+            console.log(error)
             //TODO: ADD TOAST MESSAGE
         }
     }
@@ -34,7 +23,7 @@ export default function Shortlisted() {
     const getProfile = async () => {
         shortListedCandidates?.length > 0 && shortListedCandidates.map(async (candidate) => {
             try {
-                const response = await axios.post(CANDIDATE_PROFILE, {
+                const response = await api.post(CANDIDATE_PROFILE, {
                     "resumeId": candidate?.resumeId,
                     "isWhiteListed": 0
                 })

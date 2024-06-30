@@ -1,9 +1,9 @@
-import axios from 'axios';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 import { USER_VIDEO } from '../../../utils/apiConstants';
 import { t } from 'i18next';
+import api from '../../../utils/axios';
 
 export default function ProfileCard({ candidateData }) {
 
@@ -13,7 +13,7 @@ export default function ProfileCard({ candidateData }) {
 
     const getVideoRecording = async () => {
         try {
-            const response = await axios.post(USER_VIDEO,
+            const response = await api.post(USER_VIDEO,
                 {
                     "bucketName": "ai_interviewer_recordings", "objectName": videoRecording?.split("/ai_interviewer_recordings/")[1]
                 }, {

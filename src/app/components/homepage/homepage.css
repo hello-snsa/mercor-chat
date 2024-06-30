@@ -185,7 +185,7 @@
     .homepage_howItWorks{
       flex-direction: column;
       align-items: center;
-      /* justify-content: center; */
+      margin-bottom: 10rem;
       height: fit-content;
     }
     .homepage_step{
@@ -201,9 +201,6 @@
       justify-content: flex-start;
       margin: 0;
       padding: 0;
-    }
-    .homepage_howItWorks{
-      margin-bottom: 10rem;
     }
     .homepage_searchbar{
       width: 80vw;

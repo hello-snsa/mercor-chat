@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types'
 import { t } from 'i18next';
-import axios from 'axios';
 
 import ProfileCard from './ProfileCard';
 import { BookmarkActive, BookmarkWhite, HireIcon } from '../../../assets/images';
 import { SHORTLISTED_CANDIDATES } from '../../../utils/apiConstants';
-import getToken from '../../../utils/getToken';
+import api from '../../../utils/axios';
 
 export default function CandidateCard({ candidateData }) {
 
@@ -16,56 +15,42 @@ export default function CandidateCard({ candidateData }) {
     const [toggleView, setToggleView] = useState(false);
 
     const deleteShortListedCandidates = async () => {
-        const response = await axios.delete(SHORTLISTED_CANDIDATES, {
-            "shortlistedCandidateId": userId,
-        }, {
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${localStorage.getItem('MercorUserToken')}`
+        try {
+            const response = await api.delete(SHORTLISTED_CANDIDATES, { data:{
+                "shortlistedCandidateId": userId,
+            }})
+            if (response.data === true) {
+                setIsShortlisted(false)
             }
-        })
-        if (response.data == "true") {
-            setIsShortlisted(false)
+        } catch (error) {
+            console.log(error);
+            // TODO: add Toast message.
         }
-
     }
     const postShortListedCandidates = async () => {
         try {
-            const response = await axios.post(SHORTLISTED_CANDIDATES, {
+            const response = await api.post(SHORTLISTED_CANDIDATES, {
                 "shortlistedCandidateId": userId,
                 "contractorId": "test@mercor.com",
                 "contractorName": name,
                 "contractorUserId": "b4fcaff2-ab95-11ee-a4ba-42010a400021",
                 "userId": "hello.shahanshah@gmail.com",
-                "fullTimeAmount": fullTimePrice,
-                "partTimeAmount": partTimePrice,
+                "fullTimeAmount": fullTimePrice.toString(),
+                "partTimeAmount": partTimePrice.toString(),
                 "status": "shortlisted",
                 "userEmail": "hello.shahanshah@gmail.com", "userShortlistTabId": null,
                 "resumeId": resumeId
-            }, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem('MercorUserToken')}`
-                }
             })
-            console.log("shortlisted", response)
-            if (response.data == 'true') {
+            if (response.data === true) {
                 setIsShortlisted(true)
             }
-
         } catch (error) {
-            if (error.response?.status === 403) {
-                getToken(postShortListedCandidates);
-            } else {
-                console.log(error)
-            }
+            console.log(error)
             //TODO: ADD TOAST MESSAGE
         }
     }
 
     const handleShortlist = () => {
-        setIsShortlisted(!isShortlisted);
-        //TODO: Make api call to shortlist candidate.
         if (!isShortlisted) {
             postShortListedCandidates()
         } else {
