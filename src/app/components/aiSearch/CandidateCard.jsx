@@ -33,7 +33,7 @@ export default function CandidateCard({ candidateData }) {
                 "shortlistedCandidateId": userId,
                 "contractorId": "test@mercor.com",
                 "contractorName": name,
-                "contractorUserId": "b4fcaff2-ab95-11ee-a4ba-42010a400021",
+                "contractorUserId": userId,
                 "userId": "hello.shahanshah@gmail.com",
                 "fullTimeAmount": fullTimePrice.toString(),
                 "partTimeAmount": partTimePrice.toString(),
