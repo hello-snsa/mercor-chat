@@ -86,6 +86,13 @@ border-radius: 2px;
   left:45%;
   bottom: auto;
 }
+.shortlisted_empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
 /* Flex */
 .flex {
   display: flex;

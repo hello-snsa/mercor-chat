@@ -9,16 +9,18 @@ import api from '../../../utils/axios';
 
 export default function CandidateCard({ candidateData }) {
 
-    const { finalImageUrl, name, skills, country, yearsOfWorkExperience, summary, fullTime, partTime, status, fullTimePrice, partTimePrice, resumeId, userId } = candidateData;
+    const { finalImageUrl, name, skills, country, yearsOfWorkExperience, summary, fullTime, partTime, status, fullTimePrice, partTimePrice, resumeId, userId, shortlistedCandidateId } = candidateData;
 
     const [isShortlisted, setIsShortlisted] = useState(status === "shortlisted" ? true : false);
     const [toggleView, setToggleView] = useState(false);
 
     const deleteShortListedCandidates = async () => {
         try {
-            const response = await api.delete(SHORTLISTED_CANDIDATES, { data:{
-                "shortlistedCandidateId": userId,
-            }})
+            const response = await api.delete(SHORTLISTED_CANDIDATES, {
+                data: {
+                    "shortlistedCandidateId": shortlistedCandidateId
+                }
+            })
             if (response.data === true) {
                 setIsShortlisted(false)
             }
@@ -126,7 +128,8 @@ CandidateCard.propTypes = {
         fullTimePrice: PropTypes.number,
         partTimePrice: PropTypes.number,
         resumeId: PropTypes.string,
-        userId: PropTypes.string
+        userId: PropTypes.string,
+        shortlistedCandidateId: PropTypes.string
     })
 }
 

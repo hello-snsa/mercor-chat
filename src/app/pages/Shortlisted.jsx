@@ -13,6 +13,7 @@ export default function Shortlisted() {
     const getShortListedCandidates = async () => {
         try {
             const response = await api.get(SHORTLISTED_CANDIDATES)
+
             setShortListedCandidates(response?.data?.shortlist?.['my-shortlist'] ?? []);
         } catch (error) {
             console.log(error)
@@ -25,9 +26,9 @@ export default function Shortlisted() {
             try {
                 const response = await api.post(CANDIDATE_PROFILE, {
                     "resumeId": candidate?.resumeId,
-                    "isWhiteListed": 0
+                    "isWhiteListed": 0,
                 })
-                response?.data[0] && setProfileList(prev => [...prev, { ...response?.data[0], "status": "shortlisted", }]);
+                response?.data[0] && setProfileList(prev => [...prev, { ...response?.data[0], "status": "shortlisted", "shortlistedCandidateId": candidate?.shortlistedCandidateId, }]);
             } catch (error) {
                 console.log(error)
             } finally {
@@ -47,6 +48,8 @@ export default function Shortlisted() {
         if (shortListedCandidates?.length > 0) {
             setIsLoading(true);
             getProfile();
+        } else {
+            setIsLoading(false);
         }
     }, [shortListedCandidates]);
 
@@ -67,6 +70,7 @@ export default function Shortlisted() {
                                     )
                                 })
                             }
+                            {profileList?.length === 0 && !isLoading && <h2 className="shortlisted_empty">No Shortlisted Candidates</h2>}
                         </div>
                     </div>
                 </div>
