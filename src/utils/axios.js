@@ -37,20 +37,19 @@ api.interceptors.response.use(
     function (response) {
         return response;
     },
-    function (error) {
+    async function (error) {
         const originalRequest = error.config;
         if (error?.response?.status === 401 && !originalRequest._retry) {
             if (isRefreshing) {
-                return new Promise(function (resolve, reject) {
-                    failedQueue.push({ resolve, reject });
-                })
-                .then(token => {
+                try {
+                    const token = await new Promise(function (resolve, reject) {
+                        failedQueue.push({ resolve, reject });
+                    });
                     originalRequest.headers.Authorization = 'Bearer ' + token;
-                    return api(originalRequest);
-                })
-                .catch(err => {
-                    return Promise.reject(err);
-                });
+                    return await api(originalRequest);
+                } catch (err) {
+                    return await Promise.reject(err);
+                }
             }
 
             originalRequest._retry = true;
