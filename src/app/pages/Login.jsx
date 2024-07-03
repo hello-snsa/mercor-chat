@@ -2,11 +2,13 @@ import { t } from "i18next";
 import { useEffect, useState } from "react";
 
 import '../components/login/login.css';
-import { REFRESH_TOKEN, TOKEN } from "../../utils/Constants";
+import { REFRESH_TOKEN } from "../../utils/Constants";
 import toast from "../../utils/toast";
 import { ToastContainer } from 'react-toastify';
 import { LoginHero } from "../../assets/images";
 import { useNavigate } from "react-router-dom";
+import { TOKEN_URL } from "../../utils/apiConstants";
+import axios from "axios";
 
 export default function Login() {
 
@@ -26,13 +28,30 @@ export default function Login() {
         setPassword(e.target.value);
 
     }
+    const getLoggedIn = async () => {
+        try {
+            const response = await axios.post(`${TOKEN_URL}`, {
+                "grant_type": "refresh_token",
+                "refresh_token": REFRESH_TOKEN,
+            })
+            const data = response.data;
+            if (response.status === 200) {
+                localStorage.setItem("MercorUserToken", data?.access_token);
+                localStorage.setItem("MercorRefreshToken", data?.refresh_token);
+                navigate("/ai-search");
+            }
+            else {
+                console.log("error", response);
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
 
     const handleLogin = () => {
         if (email === "ali@test.com" && password === "123456") {
-            localStorage.setItem("email", email);
-            localStorage.setItem("MercorUserToken", TOKEN);
-            localStorage.setItem("MercorRefreshToken", REFRESH_TOKEN);
-            navigate("/ai-search");
+            getLoggedIn();
         } else {
             toast('Invalid email or password', 'error');
         }
@@ -57,6 +76,7 @@ export default function Login() {
         }
 
     }, [email, password])
+
     useEffect(() => {
         if (localStorage.getItem("MercorUserToken")) {
             navigate("/ai-search");
@@ -74,7 +94,6 @@ export default function Login() {
                     <div>
                         <p className="login_header">{t("Welcome to Marcus AI")}</p>
                     </div>
-                    {/* Email/Phone */}
                     <div className="flex flex-column gap-5 flex-jc-sb">
                         <p className="bold">
                             {t("Login to your account")}
