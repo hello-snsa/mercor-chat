@@ -3,6 +3,7 @@ import { t } from 'i18next'
 import './header.css'
 import { Logo } from '../../assets/images'
 import { Link, useLocation } from 'react-router-dom'
+import LanguageSwitcher from '../../i18n/LanguageSwitcher'
 
 export default function Header() {
 
@@ -20,6 +21,7 @@ export default function Header() {
             </div>
 
             <div className="header_last-column">
+        <LanguageSwitcher />
                 {currentPage !== "/login" &&
                     !localStorage.getItem("MercorUserToken")
                     ? <Link to="/login" >

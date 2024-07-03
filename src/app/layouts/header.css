@@ -35,3 +35,31 @@
     justify-content: end;
     width: 50%;
   }
+  .languageSwitcher{
+    gap: 1rem;
+    background-color: #5F3DA7;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .lang-selector{
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #4B22A2;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header_logo-text{
+        font-size: medium;
+    }
+    .languageSwitcher{
+        gap: 0.5rem;
+    }
+    .lang-selector{
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+}

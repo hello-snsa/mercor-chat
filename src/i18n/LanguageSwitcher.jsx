@@ -1,28 +1,27 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-const lngs = {
-  en: { nativeName: 'English' },
-  hi: { nativeName: 'हिंदी' },
-}
+const languages = [
+  { code: 'en', name: 'English' },
+  { code: 'hi', name: 'हिंदी' },
+]
 
 export default function LanguageSwitcher() {
-  const { t, i18n } = useTranslation()
-  const [lang, setLang] = useState('en')
+  const { i18n } = useTranslation()
+  const currentPath = useLocation().pathname;
+  const navigate = useNavigate();
 
-  const handleChange = ({ target }: any) => {
-    const lang = target.value
-    setLang(lang)
-    i18n.changeLanguage(lang)
+  const handleChange = (language) => {
+    i18n.changeLanguage(language)
+    return navigate(currentPath);
   }
 
   return (
-    <div>
-      {t('t1')}
-      <select value={lang} onChange={handleChange} className="form-select">
-        {Object.keys(lngs).map((lng) => (
-          <option key={lng} value={lng}>
-            {lngs[lng as keyof typeof lngs].nativeName}
+    <div className='languageSwitcher'>
+      <select onChange={(event) => handleChange(event.target.value)} className="lang-selector">
+        {languages.map((language) => (
+          <option key={language.code} value={language.code}>
+            {language.name}
           </option>
         ))}
       </select>
